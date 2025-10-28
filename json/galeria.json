@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "Local Principal",
+        "image": "/img/galeria/local-principal.webp",
+        "alt": "Fachada de Cevichería El Pueblo",
+        "category": "instalaciones",
+        "description": "Nuestro local principal donde preparamos los mejores ceviches"
+    },
+    {
+        "id": 2,
+        "title": "Ceviche Mixto",
+        "image": "/img/menu/ceviche-mixto.webp",
+        "alt": "Ceviche mixto fresco",
+        "category": "comida",
+        "description": "Nuestro ceviche mixto preparado al momento"
+    },
+    {
+        "id": 3,
+        "title": "Atención al Cliente",
+        "image": "/img/galeria/atencion.webp",
+        "alt": "Personal atendiendo clientes",
+        "category": "servicio",
+        "description": "Nuestro equipo siempre listo para servirle"
+    },
+    {
+        "id": 4,
+        "title": "Pescado Fresco",
+        "image": "/img/menu/pescado-frito.webp",
+        "alt": "Pescado frito completo",
+        "category": "comida",
+        "description": "Pescado entero frito con acompañamientos"
+    },
+    {
+        "id": 5,
+        "title": "Zona de Preparación",
+        "image": "/img/galeria/preparacion.webp",
+        "alt": "Área de preparación de alimentos",
+        "category": "instalaciones",
+        "description": "Donde preparamos todo con los más altos estándares de higiene"
+    },
+    {
+        "id": 6,
+        "title": "Eventos Especiales",
+        "image": "/img/galeria/eventos.webp",
+        "alt": "Celebración en la cevichería",
+        "category": "servicio",
+        "description": "Celebraciones y eventos especiales en nuestro local"
+    }
+]

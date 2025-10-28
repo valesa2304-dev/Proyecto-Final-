@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Completo - Cevichería El Pueblo | Experiencia Gastronómica Premium</title>
+    <meta name="description" content="Menú completo con los mejores ceviches, pescados, mariscos y bebidas. Calidad premium, ingredientes frescos y sabores auténticos del mar.">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Nuestros estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <!-- Header con Logo -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <img src="img/logo.jpg" alt="Cevichería El Pueblo" class="logo">
+                <span class="logo-text">Cevichería El Pueblo</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="menu.html" class="active">Menú</a>
+                <a href="#especialidades">Especialidades</a>
+                <a href="#categorias">Categorías</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <div class="header-cta">
+                <a href="https://wa.me/50663199969" class="cta-button small" target="_blank">
+                    <i class="bi bi-whatsapp me-2"></i>Ordenar
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section del Menú Premium -->
+    <section class="menu-hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <img src="img/restaurante.jpg" alt="Menú Cevichería El Pueblo" class="hero-bg-image">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="bi bi-award me-2"></i>+50 Platillos Exclusivos
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line">Nuestro Menú</span>
+                    <span class="title-line accent">Premium</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Descubre una experiencia gastronómica única donde cada plato cuenta una historia de tradición, 
+                    frescura y pasión. Desde ceviches clásicos hasta creaciones innovadoras, todo preparado 
+                    con ingredientes 100% frescos y técnicas ancestrales.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Ingredientes Frescos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">8+</span>
+                        <span class="stat-label">Años de Experiencia</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Platillos Únicos</span>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#categorias" class="cta-button primary">
+                        <i class="bi bi-list-ul me-2"></i>Explorar Categorías
+                    </a>
+                    <a href="#especialidades" class="cta-button secondary">
+                        <i class="bi bi-star me-2"></i>Ver Especialidades
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="floating-card">
+                    <img src="img/ceviche.png" alt="Ceviche Mixto Premium" class="featured-dish">
+                    <div class="card-badge">Más Popular</div>
+                    <div class="card-content">
+                        <h4>Ceviche Mixto Premium</h4>
+                        <p>Pescado, camarón y calamar en leche de tigre</p>
+                        <span class="price">₡4,500</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navegación Rápida entre Categorías -->
+    <section class="quick-nav" id="categorias">
+        <div class="container">
+            <div class="section-header centered">
+                <h2>Explora Nuestras Categorías</h2>
+                <p>Descubre la variedad de sabores que tenemos para ti</p>
+            </div>
+            
+            <div class="category-grid">
+                <a href="#entradas" class="category-card" data-category="entradas">
+                    <div class="category-icon">
+                        <i class="bi bi-egg-fried"></i>
+                    </div>
+                    <h3>Entradas</h3>
+                    <p>Perfectas para comenzar tu experiencia gastronómica</p>
+                    <span class="item-count">8 platillos</span>
+                </a>
+                
+                <a href="#ceviches" class="category-card" data-category="ceviches">
+                    <div class="category-icon">
+                        <i class="bi bi-droplet"></i>
+                    </div>
+                    <h3>Ceviches</h3>
+                    <p>Nuestra especialidad signature preparada al momento</p>
+                    <span class="item-count">12 variedades</span>
+                </a>
+                
+                <a href="#platos-fuertes" class="category-card" data-category="platos-fuertes">
+                    <div class="category-icon">
+                        <i class="bi bi-fire"></i>
+                    </div>
+                    <h3>Platos Fuertes</h3>
+                    <p>Platillos sustanciosos que satisfacen paladares exigentes</p>
+                    <span class="item-count">15 opciones</span>
+                </a>
+                
+                <a href="#mariscos" class="category-card" data-category="mariscos">
+                    <div class="category-icon">
+                        <i class="bi bi-shrimp"></i>
+                    </div>
+                    <h3>Mariscos</h3>
+                    <p>La frescura del mar en preparaciones tradicionales e innovadoras</p>
+                    <span class="item-count">10 especialidades</span>
+                </a>
+                
+                <a href="#bebidas" class="category-card" data-category="bebidas">
+                    <div class="category-icon">
+                        <i class="bi bi-cup-straw"></i>
+                    </div>
+                    <h3>Bebidas</h3>
+                    <p>Refrescantes acompañamientos para realzar tu experiencia</p>
+                    <span class="item-count">8 opciones</span>
+                </a>
+                
+                <a href="#promociones" class="category-card" data-category="promociones">
+                    <div class="category-icon">
+                        <i class="bi bi-percent"></i>
+                    </div>
+                    <h3>Promociones</h3>
+                    <p>Combos especiales y ofertas exclusivas para disfrutar más</p>
+                    <span class="item-count">5 combos</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Entradas -->
+    <section class="menu-category" id="entradas">
+        <div class="container">
+            <div class="category-header">
+                <div class="category-info">
+                    <h2 class="category-title">
+                        <i class="bi bi-egg-fried me-3"></i>
+                        Entradas
+                    </h2>
+                    <p class="category-description">Perfectas para comenzar tu experiencia gastronómica con sabores que despiertan el apetito</p>
+                </div>
+                <div class="category-stats">
+                    <span class="stat">8 platillos</span>
+                    <span class="stat">Desde ₡2,500</span>
+                </div>
+            </div>
+            
+            <div class="menu-grid">
+                <!-- Ceviche Clásico -->
+                <div class="menu-item premium">
+                    <div class="item-image">
+                        <img src="img/ceviche.png" alt="Ceviche Clásico">
+                        <div class="item-badge popular">Más Pedido</div>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Ceviche Clásico Tradicional</h3>
+                            <span class="item-price">₡4,500</span>
+                        </div>
+                        <p class="item-description">
+                            Pescado fresco marinado en limón con cebolla morada, cilantro, ají limo y nuestro toque 
+                            secreto de la casa. Preparado al momento para garantizar máxima frescura.
+                        </p>
+                        <div class="item-features">
+                            <span class="feature">
+                                <i class="bi bi-clock"></i>
+                                Prep: 15 min
+                            </span>
+                            <span class="feature">
+                                <i class="bi bi-thermometer"></i>
+                                Servir frío
+                            </span>
+                            <span class="feature">
+                                <i class="bi bi-person"></i>
+                                1-2 personas
+                            </span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="cta-button primary small" onclick="orderItem('Ceviche Clásico Tradicional')">
+                                <i class="bi bi-cart-plus me-2"></i>Ordenar Ahora
+                            </button>
+                            <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vuelve a la Vida -->
+                <div class="menu-item premium">
+                    <div class="item-image">
+                        <img src="img/vuelve a la vida.png" alt="Vuelve a la Vida">
+                        <div class="item-badge specialty">Especialidad</div>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Vuelve a la Vida Premium</h3>
+                            <span class="item-price">₡6,800</span>
+                        </div>
+                        <p class="item-description">
+                            Mezcla premium de camarón, pulpo, callo de hacha y ostiones en salsa cocktail especial 
+                            con toques cítricos. Perfecto para compartir en ocasiones especiales.
+                        </p>
+                        <div class="item-features">
+                            <span class="feature">
+                                <i class="bi bi-clock"></i>
+                                Prep: 20 min
+                            </span>
+                            <span class="feature">
+                                <i class="bi bi-thermometer"></i>
+                                Servir frío
+                            </span>
+                            <span class="feature">
+                                <i class="bi bi-people"></i>
+                                2-4 personas
+                            </span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="cta-button primary small" onclick="orderItem('Vuelve a la Vida Premium')">
+                                <i class="bi bi-cart-plus me-2"></i>Ordenar Ahora
+                            </button>
+                            <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Empanadas de Mariscos -->
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="img/empanadas.jpg" alt="Empanadas de Mariscos">
+                        <div class="item-badge new">Nuevo</div>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Empanadas de Mariscos Artesanales</h3>
+                            <span class="item-price">₡3,200</span>
+                        </div>
+                        <p class="item-description">
+                            Empanadas artesanales rellenas de mariscos frescos, especias seleccionadas y queso, 
+                            acompañadas de nuestra salsa de la casa. Crocantes por fuera, jugosas por dentro.
+                        </p>
+                        <div class="item-features">
+                            <span class="feature">
+                                <i class="bi bi-clock"></i>
+                                Prep: 10 min
+                            </span>
+                            <span class="feature">
+                                <i class="bi bi-thermometer"></i>
+                                Servir caliente
+                            </span>
+                            <span class="feature">
+                                <i class="bi bi-person"></i>
+                                3 unidades
+                            </span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="cta-button primary small" onclick="orderItem('Empanadas de Mariscos Artesanales')">
+                                <i class="bi bi-cart-plus me-2"></i>Ordenar Ahora
+                            </button>
+                            <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tostadas de Ceviche -->
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="img/ceviche.png" alt="Tostadas de Ceviche">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Tostadas de Ceviche Clásico</h3>
+                            <span class="item-price">₡2,800</span>
+                        </div>
+                        <p class="item-description">
+                            Crujientes tostadas de maíz topped con nuestro ceviche clásico, aguacate y crema. 
+                            Perfecto para un bocado rápido lleno de sabor.
+                        </p>
+                        <div class="item-features">
+                            <span class="feature">
+                                <i class="bi bi-clock"></i>
+                                Prep: 8 min
+                            </span>
+                            <span class="feature">
+                                <i class="bi bi-thermometer"></i>
+                                Servir frío
+                            </span>
+                            <span class="feature">
+                                <i class="bi bi-person"></i>
+                                2 unidades
+                            </span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="cta-button primary small" onclick="orderItem('Tostadas de Ceviche Clásico')">
+                                <i class="bi bi-cart-plus me-2"></i>Ordenar Ahora
+                            </button>
+                            <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Ceviches -->
+    <section class="menu-category featured" id="ceviches">
+        <div class="container">
+            <div class="category-header">
+                <div class="category-info">
+                    <h2 class="category-title">
+                        <i class="bi bi-droplet me-3"></i>
+                        Ceviches
+                    </h2>
+                    <p class="category-description">Nuestra especialidad signature, preparada al momento con los mejores ingredientes y técnicas tradicionales</p>
+                </div>
+                <div class="category-stats">
+                    <span class="stat">12 variedades</span>
+                    <span class="stat">Desde ₡3,800</span>
+                </div>
+            </div>
+            
+            <div class="menu-grid">
+                <!-- Ceviche Mixto Premium -->
+                <div class="menu-item premium featured">
+                    <div class="item-image">
+                        <img src="img/ceviche.png" alt="Ceviche Mixto Premium">
+                        <div class="item-badge popular">Más Vendido</div>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Ceviche Mixto Premium</h3>
+                            <span class="item-price">₡5,500</span>
+                        </div>
+                        <p class="item-description">
+                            Combinación perfecta de pescado fresco, camarón y calamar en leche de tigre con cebolla 
+                            morada, culantro y maíz tostado. Nuestra creación más emblemática.
+                        </p>
+                        <div class="item-features">
+                            <span class="feature">
+                                <i class="bi bi-clock"></i>
+                                Prep: 15 min
+                            </span>
+                            <span class="feature">
+                                <i class="bi bi-thermometer"></i>
+                                Servir frío
+                            </span>
+                            <span class="feature">
+                                <i class="bi bi-people"></i>
+                                2-3 personas
+                            </span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="cta-button primary small" onclick="orderItem('Ceviche Mixto Premium')">
+                                <i class="bi bi-cart-plus me-2"></i>Ordenar Ahora
+                            </button>
+                            <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ceviche de Pescado Tradicional -->
+                <div class="menu-item premium">
+                    <div class="item-image">
+                        <img src="img/ceviche.png" alt="Ceviche de Pescado Tradicional">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Ceviche de Pescado Tradicional</h3>
+                            <span class="item-price">₡4,200</span>
+                        </div>
+                        <p class="item-description">
+                            Puro sabor del mar. Pescado fresco marinado al punto perfecto con limón, cebolla y 
+                            especias seleccionadas. La esencia de la cocina costeña en cada bocado.
+                        </p>
+                        <div class="item-features">
+                            <span class="feature">
+                                <i class="bi bi-clock"></i>
+                                Prep: 12 min
+                            </span>
+                            <span class="feature">
+                                <i class="bi bi-thermometer"></i>
+                                Servir frío
+                            </span>
+                            <span class="feature">
+                                <i class="bi bi-person"></i>
+                                1-2 personas
+                            </span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="cta-button primary small" onclick="orderItem('Ceviche de Pescado Tradicional')">
+                                <i class="bi bi-cart-plus me-2"></i>Ordenar Ahora
+                            </button>
+                            <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ceviche Costeño Especial -->
+                <div class="menu-item premium">
+                    <div class="item-image">
+                        <img src="img/costefio.jpeg" alt="Ceviche Costeño Especial">
+                        <div class="item-badge specialty">Especial</div>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Ceviche Costeño Especial</h3>
+                            <span class="item-price">₡5,800</span>
+                        </div>
+                        <p class="item-description">
+                            Nuestra receta exclusiva con ingredientes secretos que le dan un sabor único y 
+                            auténticamente costeño. Un viaje de sabores tradicionales con un toque innovador.
+                        </p>
+                        <div class="item-features">
+                            <span class="feature">
+                                <i class="bi bi-clock"></i>
+                                Prep: 18 min
+                            </span>
+                            <span class="feature">
+                                <i class="bi bi-thermometer"></i>
+                                Servir frío
+                            </span>
+                            <span class="feature">
+                                <i class="bi bi-people"></i>
+                                2-3 personas
+                            </span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="cta-button primary small" onclick="orderItem('Ceviche Costeño Especial')">
+                                <i class="bi bi-cart-plus me-2"></i>Ordenar Ahora
+                            </button>
+                            <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner de Promoción Especial -->
+    <section class="promo-banner" id="promociones">
+        <div class="container">
+            <div class="promo-content">
+                <div class="promo-text">
+                    <div class="promo-badge">
+                        <i class="bi bi-lightning-fill me-2"></i>OFERTA ESPECIAL
+                    </div>
+                    <h2>Combo Familiar Deluxe</h2>
+                    <p class="promo-description">
+                        Perfecto para compartir momentos especiales en familia. Todo incluido para una 
+                        experiencia gastronómica completa que satisfará hasta los paladares más exigentes.
+                    </p>
+                    
+                    <ul class="promo-features">
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Ceviche Mixto Grande (para 4 personas)
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Pescado Frito Entero con guarniciones
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            4 Bebidas artesanales de la casa
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Postre sorpresa incluido
+                        </li>
+                    </ul>
+
+                    <div class="promo-pricing">
+                        <div class="current-price">₡12,000</div>
+                        <div class="original-price">₡15,000</div>
+                        <div class="discount-badge">20% OFF</div>
+                    </div>
+
+                    <a href="https://wa.me/50663199969?text=¡Hola! Quiero el Combo Familiar Deluxe" 
+                       class="cta-button primary large" target="_blank">
+                        <i class="bi bi-whatsapp me-2"></i>Pedir Combo Especial
+                    </a>
+                </div>
+                <div class="promo-image">
+                    <img src="img/promos.png" alt="Combo Familiar Deluxe" class="promo-img">
+                    <div class="image-badge">MÁS PEDIDO</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="img/logo.jpg" alt="Cevichería El Pueblo" class="footer-logo-img">
+                        <span class="footer-logo-text">Cevichería El Pueblo</span>
+                    </div>
+                    <p class="footer-description">
+                        Auténtico sabor costeño con tradición familiar. Servimos felicidad en cada plato desde 2015, 
+                        manteniendo vivas las recetas tradicionales de nuestra costa.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/50663199969" class="social-link">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Horarios de Atención</h4>
+                    <div class="schedule">
+                        <div class="schedule-item">
+                            <span class="days">Lunes, Miércoles, Viernes</span>
+                            <span class="hours">4:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="days">Martes</span>
+                            <span class="hours closed">Cerrado</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="days">Sábado y Domingo</span>
+                            <span class="hours">12:00 MD - 11:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="bi bi-telephone"></i>
+                            <span>+506 6319-9969</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="bi bi-geo-alt"></i>
+                            <span>San Juan de Santa Bárbara, Heredia</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="bi bi-envelope"></i>
+                            <span>cevicheriadelpueblo@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Inicio</a>
+                        <a href="menu.html">Menú Completo</a>
+                        <a href="#especialidades">Especialidades</a>
+                        <a href="contacto.html">Contacto</a>
+                        <a href="#promociones">Promociones</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cevichería El Pueblo. Todos los derechos reservados. | Desarrollado con <i class="bi bi-heart-fill" style="color: var(--coral-blush);"></i> para amantes del buen comer</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp FAB -->
+    <a href="https://wa.me/50663199969" class="whatsapp-fab" aria-label="Chatear por WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <script src="js/app.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

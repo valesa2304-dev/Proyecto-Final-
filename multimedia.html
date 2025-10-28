@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Multimedia — Cevichería El Pueblo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
+                <img src="/img/logo.svg" width="36" height="36" alt="Logo Cevichería El Pueblo" class="me-2">
+                El Pueblo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/historia.html">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/menu.html">Menú</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/galeria.html">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/ubicacion.html">Ubicación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/acerca.html">Acerca</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/multimedia.html">Multimedia</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <h1 class="fw-bold mb-4">Experiencia Multimedia</h1>
+        <p class="lead mb-5">Sumérgete en el mundo de la Cevichería El Pueblo a través de videos, audios y contenido interactivo.</p>
+
+        <!-- Video Section -->
+        <section class="mb-5">
+            <div class="row align-items-center mb-4">
+                <div class="col-md-8">
+                    <h2 class="fw-bold">
+                        <i class="bi bi-play-circle me-2 text-coral"></i>
+                        Video Promocional
+                    </h2>
+                    <p class="text-muted">Conoce nuestro proceso de preparación y el ambiente único que ofrecemos.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="ratio ratio-16x9">
+                        <video controls poster="/img/multimedia/video-poster.webp" class="rounded-3 shadow">
+                            <source src="/media/videos/promocional.mp4" type="video/mp4">
+                            <source src="/media/videos/promocional.webm" type="video/webm">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Detalles del Video</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><strong>Duración:</strong> 2:30 minutos</li>
+                                <li class="mb-2"><strong>Calidad:</strong> 1080p HD</li>
+                                <li class="mb-2"><strong>Contenido:</strong></li>
+                                <li class="mb-1">• Proceso de preparación</li>
+                                <li class="mb-1">• Entrevistas con el chef</li>
+                                <li class="mb-1">• Testimonios de clientes</li>
+                                <li class="mb-0">• Tour por las instalaciones</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Audio Section -->
+        <section class="mb-5">
+            <h2 class="fw-bold mb-4">
+                <i class="bi bi-music-note-beamed me-2 text-coral"></i>
+                Experiencia Sonora
+            </h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Ambiente del Local</h5>
+                            <p class="card-text">Escucha la ambientación sonora de nuestra cevichería.</p>
+                            <audio controls class="w-100 mb-3">
+                                <source src="/media/audio/ambiente-local.mp3" type="audio/mpeg">
+                                <source src="/media/audio/ambiente-local.ogg" type="audio/ogg">
+                                Tu navegador no soporta el elemento de audio.
+                            </audio>
+                            <small class="text-muted">Música suave y sonidos ambientales del restaurante.</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Entrevista con el Chef</h5>
+                            <p class="card-text">Conoce los secretos detrás de nuestras recetas.</p>
+                            <audio controls class="w-100 mb-3">
+                                <source src="/media/audio/entrevista-chef.mp3" type="audio/mpeg">
+                                <source src="/media/audio/entrevista-chef.ogg" type="audio/ogg">
+                                Tu navegador no soporta el elemento de audio.
+                            </audio>
+                            <small class="text-muted">Entrevista exclusiva con nuestro chef principal.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Gallery -->
+        <section class="mb-5">
+            <h2 class="fw-bold mb-4">
+                <i class="bi bi-images me-2 text-coral"></i>
+                Galería Interactiva
+            </h2>
+            
+            <div class="row g-3" id="interactiveGallery">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card gallery-card">
+                        <img src="/img/multimedia/preparacion-1.webp" class="card-img-top thumb" alt="Preparación de ceviche" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="/img/multimedia/preparacion-1-full.webp">
+                        <div class="card-body">
+                            <small class="text-muted">Preparación tradicional</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card gallery-card">
+                        <img src="/img/multimedia/ingredientes-1.webp" class="card-img-top thumb" alt="Ingredientes frescos" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="/img/multimedia/ingredientes-1-full.webp">
+                        <div class="card-body">
+                            <small class="text-muted">Ingredientes seleccionados</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card gallery-card">
+                        <img src="/img/multimedia/platillo-1.webp" class="card-img-top thumb" alt="Platillo terminado" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="/img/multimedia/platillo-1-full.webp">
+                        <div class="card-body">
+                            <small class="text-muted">Presentación final</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card gallery-card">
+                        <img src="/img/multimedia/ambiente-1.webp" class="card-img-top thumb" alt="Ambiente del local" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="/img/multimedia/ambiente-1-full.webp">
+                        <div class="card-body">
+                            <small class="text-muted">Nuestro espacio</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- YouTube Integration -->
+        <section>
+            <h2 class="fw-bold mb-4">
+                <i class="bi bi-youtube me-2 text-coral"></i>
+                Recetas en Video
+            </h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Cómo Preparar Ceviche Mixto</h5>
+                            <div class="ratio ratio-16x9 mb-3">
+                                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Receta de Ceviche Mixto" allowfullscreen></iframe>
+                            </div>
+                            <p class="card-text">Aprende a preparar nuestro ceviche mixto signature paso a paso.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Técnicas de Cocina</h5>
+                            <div class="ratio ratio-16x9 mb-3">
+                                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Técnicas de Cocina" allowfullscreen></iframe>
+                            </div>
+                            <p class="card-text">Descubre las técnicas que hacen única nuestra cocina.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" class="img-fluid rounded-3 shadow" alt="Imagen ampliada" style="max-height: 70vh;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer py-4 bg-dark text-white">
+        <div class="container">
+            <small>© <span id="year"></span> Cevichería El Pueblo.</small>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script>
+        // Interactive gallery functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const imageModal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            
+            if (imageModal) {
+                imageModal.addEventListener('show.bs.modal', function(event) {
+                    const button = event.relatedTarget;
+                    const imageUrl = button.getAttribute('data-image');
+                    modalImage.src = imageUrl;
+                });
+            }
+        });
+    </script>
+</body>
+</html>
