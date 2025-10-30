@@ -1,25 +1,306 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-gradient sticky-top shadow-sm">
-    <div class="container">
-        <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
-            <img src="/img/logo.svg" width="36" height="36" alt="Logo Cevichería El Pueblo" class="me-2">
-            El Pueblo
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="/historia.html">Historia</a></li>
-                <li class="nav-item"><a class="nav-link" href="/menu.html">Menú</a></li>
-                <li class="nav-item"><a class="nav-link" href="/servicios.html">Servicios</a></li>
-                <li class="nav-item"><a class="nav-link" href="/galeria.html">Galería</a></li>
-                <li class="nav-item"><a class="nav-link" href="/multimedia.html">Multimedia</a></li>
-                <li class="nav-item"><a class="nav-link" href="/ubicacion.html">Ubicación</a></li>
-                <li class="nav-item"><a class="nav-link" href="/contacto.html">Contacto</a></li>
-                <li class="nav-item"><a class="nav-link active" href="/acerca.html">Acerca</a></li>
-                <li class="nav-item"><a class="nav-link" href="/autor.html">Autor</a></li>
-            </ul>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Nosotros - Cevichería El Pueblo</title>
+    <meta name="description" content="Conoce nuestra historia, misión, visión y valores. Tradición familiar desde 2015 con auténtico sabor costeño.">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="img/logo.jpg" alt="Cevichería El Pueblo" class="logo-img">
+                    <span class="logo-text">Cevichería<br>El Pueblo</span>
+                </a>
+                
+                <nav class="nav">
+                    <a href="index.html">Inicio</a>
+                    <a href="menu.html">Menú</a>
+                    <a href="acerca.html" class="active">Acerca</a>
+                    <a href="historia.html">Historia</a>
+                    <a href="servicios.html">Servicios</a>
+                    <a href="multimedia.html">Multimedia</a>
+                    <a href="autor.html">Autor</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+                
+                <div class="header-cta">
+                    <a href="https://wa.me/50663199969" class="btn btn-primary btn-small" target="_blank">
+                        <i class="bi bi-whatsapp"></i>Ordenar
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
-</nav>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="inicio">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <img src="img/fondo.jpg" alt="Cevichería El Pueblo" class="hero-bg-image">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <i class="bi bi-award"></i>Tradición desde 2015
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Acerca de <span>Nosotros</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        Descubre la pasión, tradición y dedicación que hay detrás de cada plato que servimos. 
+                        Una historia familiar que comenzó con el sueño de compartir los auténticos sabores del mar.
+                    </p>
+
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">+8</span>
+                            <span class="stat-label">Años de experiencia</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">+500</span>
+                            <span class="stat-label">Familias satisfechas</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Compromiso calidad</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <img src="img/.jpg" alt="Nuestro Equipo" class="featured-dish">
+                    <div class="floating-badge">Familia & Tradición</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MISSION SECTION ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="bi bi-bullseye"></i>
+                    </div>
+                    <h3>Nuestra Misión</h3>
+                    <p>Ofrecer los auténticos sabores del mar mediante recetas tradicionales transmitidas por generaciones, utilizando ingredientes frescos y de la más alta calidad, brindando una experiencia culinaria única que conecte a nuestros clientes con la rica tradición costeña.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="bi bi-eye"></i>
+                    </div>
+                    <h3>Nuestra Visión</h3>
+                    <p>Ser la cevichería de referencia en la zona, reconocida por nuestra autenticidad, calidad excepcional y servicio personalizado. Aspiramos a expandir nuestra tradición familiar manteniendo siempre la esencia que nos ha caracterizado desde el primer día.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="bi bi-heart"></i>
+                    </div>
+                    <h3>Nuestros Valores</h3>
+                    <ul class="values-list">
+                        <li><i class="bi bi-check-circle"></i> Calidad premium en cada ingrediente</li>
+                        <li><i class="bi bi-check-circle"></i> Tradición y autenticidad</li>
+                        <li><i class="bi bi-check-circle"></i> Servicio con calidez familiar</li>
+                        <li><i class="bi bi-check-circle"></i> Compromiso con la frescura</li>
+                        <li><i class="bi bi-check-circle"></i> Pasió n por la cocina costeña</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TEAM SECTION ===== -->
+    <section class="section features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestro Equipo</h2>
+                <p>El corazón de nuestra cevichería</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="avatars/a1.jpg" alt="Chef Principal">
+                    </div>
+                    <h4>Carlos Rodríguez</h4>
+                    <span class="member-role">Chef Principal</span>
+                    <p>Con más de 10 años de experiencia en cocina costeña, Carlos lidera nuestra cocina con pasión y dedicación.</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="img/dueño.jpeg" alt="Gerente">
+                    </div>
+                    <h4>Erick Rodriguez</h4>
+                    <span class="member-role">Gerente</span>
+                    <p>El alma de nuestro negocio, Erick asegura que cada cliente se sienta como en casa.</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="avatars/a2.jpg" alt="Atención al Cliente">
+                    </div>
+                    <h4>Ana Martínez</h4>
+                    <span class="member-role">Atención al Cliente</span>
+                    <p>Su sonrisa y servicio excepcional hacen que cada visita sea memorable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta">
+        <div class="container">
+            <h2>¿Listo para Vivir la Experiencia?</h2>
+            <p>Ven y descubre por qué somos la elección preferida de quienes buscan autenticidad y sabor</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/50663199969" class="btn btn-accent btn-large" target="_blank">
+                    <i class="bi bi-whatsapp"></i>Reservar Mesa
+                </a>
+                <a href="menu.html" class="btn btn-secondary btn-large">
+                    <i class="bi bi-menu-button"></i>Ver Menú
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Información Principal -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="img/logo.jpg" alt="Cevichería El Pueblo" class="footer-logo-img">
+                        <span class="footer-logo-text">Cevichería El Pueblo</span>
+                    </div>
+                    <p class="footer-description">
+                        Auténtico sabor costeño con tradición familiar. Servimos felicidad en cada plato desde 2015.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61558024648078" class="social-link" target="_blank">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/cevichera_del_pueblo/" class="social-link" target="_blank">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/50663199969" class="social-link" target="_blank">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Horarios -->
+                <div class="footer-section">
+                    <h4>Horarios de Atención</h4>
+                    <div class="schedule-info">
+                        <div class="schedule-item">
+                            <span class="days">Lunes, Miércoles, Viernes:</span>
+                            <span class="hours">4:00 PM - 10:00 PM</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="days">Martes:</span>
+                            <span class="hours closed">Cerrado</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="days">Sábado y Domingo:</span>
+                            <span class="hours">12:00 MD - 11:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contacto -->
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="bi bi-telephone"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Teléfono</span>
+                                <span class="contact-value">+506 6319-9969</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="bi bi-geo-alt"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Ubicación</span>
+                                <span class="contact-value">San Juan de Santa Bárbara, Heredia</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="bi bi-envelope"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">cevicheriadelpueblo@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enlaces Rápidos -->
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <div class="footer-links">
+                        <a href="index.html" class="footer-link">Inicio</a>
+                        <a href="menu.html" class="footer-link">Menú Completo</a>
+                        <a href="acerca.html" class="footer-link">Acerca de Nosotros</a>
+                        <a href="contacto.html" class="footer-link">Contacto</a>
+                        <a href="#promociones" class="footer-link">Promociones</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cevichería El Pueblo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Navegación suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header fijo al hacer scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

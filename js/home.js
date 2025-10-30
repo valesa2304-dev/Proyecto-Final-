@@ -1,7 +1,8 @@
-// Cargar items destacados en el home
+
 $(document).ready(async function() {
     try {
-        const response = await fetch('/json/menu.json');
+       
+        const response = await fetch('./json/menu.json');
         if (!response.ok) throw new Error('Error cargando menú');
         
         const items = await response.json();
@@ -22,7 +23,7 @@ $(document).ready(async function() {
         }
 
         featuredItems.forEach(item => {
-            const col = $('<div>').addClass('col-md-4');
+            const col = $('<div>').addClass('col-md-4 mb-4');
             const card = $('<div>').addClass('card h-100 shadow-sm menu-card');
             
             const img = $('<img>').addClass('card-img-top')
@@ -30,6 +31,10 @@ $(document).ready(async function() {
                     src: item.image,
                     alt: item.alt || item.name,
                     loading: 'lazy'
+                })
+                .css({
+                    'height': '200px',
+                    'object-fit': 'cover'
                 });
             
             const cardBody = $('<div>').addClass('card-body d-flex flex-column');
@@ -38,7 +43,7 @@ $(document).ready(async function() {
             
             const priceRow = $('<div>').addClass('d-flex align-items-center justify-content-between mt-auto');
             const price = $('<span>').addClass('price fw-bold text-coral').text(`₡${item.price.toLocaleString('es-CR')}`);
-            const badge = $('<span>').addClass('badge text-bg-warning').text(item.tag);
+            const badge = $('<span>').addClass('badge bg-warning text-dark').text(item.tag);
             
             priceRow.append(price, badge);
             cardBody.append(title, desc, priceRow);

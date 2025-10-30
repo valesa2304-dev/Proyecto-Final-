@@ -1,17 +1,18 @@
-// Galería de imágenes dinámica
+
 $(document).ready(async function() {
     const galleryGrid = $('#galleryGrid');
     
     if (galleryGrid.length === 0) return;
 
     try {
-        const response = await fetch('/json/galeria.json');
+      
+        const response = await fetch('./json/galeria.json');
         if (!response.ok) throw new Error('Error cargando galería');
         
         const galleryItems = await response.json();
         renderGallery(galleryItems);
 
-        // Filtro de categorías para galería
+       
         $('#galleryFilter').on('change', function() {
             const category = $(this).val();
             if (category === 'all') {
@@ -33,13 +34,16 @@ $(document).ready(async function() {
         items.forEach(item => {
             const col = $('<div>').addClass('col-md-4 col-sm-6 mb-4');
             const card = $('<div>').addClass('card h-100 shadow-sm');
-            const img = $('<img>').addClass('card-img-top thumb gallery-img')
+            const img = $('<img>').addClass('card-img-top gallery-img')
                 .attr({
                     src: item.image,
                     alt: item.alt || item.title,
                     loading: 'lazy'
                 })
-                .css('height', '250px');
+                .css({
+                    'height': '250px',
+                    'object-fit': 'cover'
+                });
             
             const cardBody = $('<div>').addClass('card-body');
             const title = $('<h5>').addClass('card-title').text(item.title);

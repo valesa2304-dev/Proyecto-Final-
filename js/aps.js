@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    console.log('🚀 Cevichería El Pueblo - Sitio premium cargado correctamente');
+    console.log('Cevichería El Pueblo - Sitio premium cargado correctamente');
 });
 
 // Función global para ordenar items

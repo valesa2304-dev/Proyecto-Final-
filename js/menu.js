@@ -1,5 +1,30 @@
 // menu.js - Funcionalidades específicas para la página del menú
 document.addEventListener('DOMContentLoaded', function() {
+    // Función auxiliar para animar contadores
+    function animateCounter(element, target, suffix = '') {
+        let current = 0;
+        const increment = target / 30;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                element.textContent = target + suffix;
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(current) + suffix;
+            }
+        }, 50);
+    }
+
+    // Contador animado para stats del hero del menú
+    function animateMenuStats() {
+        const stats = document.querySelectorAll('.menu-hero .stat-number');
+        if (stats.length >= 3) {
+            animateCounter(stats[0], 100, '%');
+            animateCounter(stats[1], 8, '+');
+            animateCounter(stats[2], 50, '+');
+        }
+    }
+
     // Navegación suave entre categorías
     document.querySelectorAll('.category-card, .nav a[href^="#"]').forEach(link => {
         link.addEventListener('click', function(e) {
@@ -117,16 +142,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000);
     }
 
-    // Contador animado para stats del hero del menú
-    function animateMenuStats() {
-        const stats = document.querySelectorAll('.menu-hero .stat-number');
-        if (stats.length >= 3) {
-            animateCounter(stats[0], 100, '%');
-            animateCounter(stats[1], 8, '+');
-            animateCounter(stats[2], 50, '+');
-        }
-    }
-
     // Iniciar contadores cuando el hero sea visible
     const menuHeroObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -140,6 +155,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuHero = document.querySelector('.menu-hero');
     if (menuHero) {
         menuHeroObserver.observe(menuHero);
+    } else {
+        console.warn('Elemento .menu-hero no encontrado');
     }
 
     // Efectos de hover mejorados para items del menú
@@ -173,21 +190,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Scroll to top después de filtrar
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Función auxiliar para animar contadores
-    function animateCounter(element, target, suffix = '') {
-        let current = 0;
-        const increment = target / 30;
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                element.textContent = target + suffix;
-                clearInterval(timer);
-            } else {
-                element.textContent = Math.floor(current) + suffix;
-            }
-        }, 50);
     }
 
     console.log('🍽️ Menú premium cargado correctamente');

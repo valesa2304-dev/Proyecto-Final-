@@ -6,29 +6,40 @@
     <title>Información del Autor — Cevichería El Pueblo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+        .autor-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 5px solid var(--coral);
+        }
+        .skill-badge {
+            font-size: 0.8rem;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
-                <img src="/img/logo.svg" width="36" height="36" alt="Logo Cevichería El Pueblo" class="me-2">
-                El Pueblo
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="./">
+                <i class="bi bi-shop me-2 fs-4"></i>
+                Cevichería El Pueblo
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/historia.html">Historia</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/menu.html">Menú</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/galeria.html">Galería</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/ubicacion.html">Ubicación</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contacto.html">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/acerca.html">Acerca</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/autor.html">Autor</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./historia.html">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./menu.html">Menú</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./galeria.html">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./ubicacion.html">Ubicación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./acerca.html">Acerca</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./autor.html">Autor</a></li>
                 </ul>
             </div>
         </div>
@@ -36,24 +47,29 @@
 
     <main class="container py-5">
         <div class="row align-items-center">
-            <div class="col-lg-8 mx-auto text-center">
-                <img src="/img/autor/valery.webp" alt="Valery Chavarría Sandí - Desarrolladora" class="autor-img mb-4 shadow">
-                <h1 class="fw-bold mb-3">Valery Chavarría Sandí</h1>
-                <p class="lead text-muted mb-4">Desarrolladora Web & Estudiante de Ingeniería del Software</p>
+            <div class="col-lg-8 mx-auto">
+                <div class="text-center mb-5">
+                    <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" 
+                         style="width: 200px; height: 200px; border: 5px solid var(--coral);">
+                        <i class="bi bi-person-circle fs-1 text-coral"></i>
+                    </div>
+                    <h1 class="fw-bold mb-3">Valery Chavarría Sandí</h1>
+                    <p class="lead text-muted mb-4">Desarrolladora Web & Estudiante de Ingeniería del Software</p>
+                </div>
                 
                 <div class="row g-4 text-start">
                     <div class="col-md-6">
-                        <div class="card h-100">
+                        <div class="card h-100 border-0 shadow-sm">
                             <div class="card-body">
                                 <h5 class="card-title fw-bold text-coral">
                                     <i class="bi bi-person-vcard me-2"></i>
                                     Información Personal
                                 </h5>
                                 <ul class="list-unstyled">
-                                    <li class="mb-2"><strong>Cédula:</strong> 119030888 </li>
+                                    <li class="mb-2"><strong>Cédula:</strong> 119030888</li>
                                     <li class="mb-2"><strong>Nombre completo:</strong> Valery Chavarría Sandí</li>
-                                    <li class="mb-2"><strong>Email:</strong> valesa2304@gmail.com </li>
-                                    <li class="mb-2"><strong>Teléfono:</strong> +506 6244-8250 </li>
+                                    <li class="mb-2"><strong>Email:</strong> valesa2304@gmail.com</li>
+                                    <li class="mb-2"><strong>Teléfono:</strong> +506 6244-8250</li>
                                     <li class="mb-0"><strong>Ubicación:</strong> Heredia, Costa Rica</li>
                                 </ul>
                             </div>
@@ -61,24 +77,24 @@
                     </div>
                     
                     <div class="col-md-6">
-                        <div class="card h-100">
+                        <div class="card h-100 border-0 shadow-sm">
                             <div class="card-body">
                                 <h5 class="card-title fw-bold text-coral">
                                     <i class="bi bi-book me-2"></i>
                                     Formación Académica
                                 </h5>
                                 <ul class="list-unstyled">
-                                    <li class="mb-2">🎓 Ingeniería del Software - Universidad Técnica Nacional </li>
-                                    <li class="mb-2">📚 Diseño Web </li>
-                                    <li class="mb-2">💻 Certificación en JavaScript Moderno</li>
-                                    <li class="mb-0">🎯 Enfoque en UX/UI Design</li>
+                                    <li class="mb-2"><i class="bi bi-mortarboard text-coral me-2"></i>Ingeniería del Software - Universidad Técnica Nacional</li>
+                                    <li class="mb-2"><i class="bi bi-laptop text-coral me-2"></i>Desarrollo Web Full Stack</li>
+                                    <li class="mb-2"><i class="bi bi-file-code text-coral me-2"></i>Certificación en JavaScript Moderno</li>
+                                    <li class="mb-0"><i class="bi bi-palette text-coral me-2"></i>Especialización en UX/UI Design</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     
                     <div class="col-12">
-                        <div class="card">
+                        <div class="card border-0 shadow-sm">
                             <div class="card-body">
                                 <h5 class="card-title fw-bold text-coral">
                                     <i class="bi bi-tools me-2"></i>
@@ -86,29 +102,29 @@
                                 </h5>
                                 <div class="row g-3">
                                     <div class="col-md-3">
-                                        <h6>Frontend</h6>
-                                        <span class="badge bg-primary mb-1">HTML5</span>
-                                        <span class="badge bg-primary mb-1">CSS3</span>
-                                        <span class="badge bg-primary mb-1">JavaScript</span>
-                                        <span class="badge bg-primary mb-1">Bootstrap 5</span>
+                                        <h6 class="fw-bold text-coral">Frontend</h6>
+                                        <span class="badge bg-primary mb-1 skill-badge">HTML5</span>
+                                        <span class="badge bg-primary mb-1 skill-badge">CSS3</span>
+                                        <span class="badge bg-primary mb-1 skill-badge">JavaScript</span>
+                                        <span class="badge bg-primary mb-1 skill-badge">Bootstrap 5</span>
                                     </div>
                                     <div class="col-md-3">
-                                        <h6>Librerías</h6>
-                                        <span class="badge bg-success mb-1">jQuery</span>
-                                        <span class="badge bg-success mb-1">Vue.js</span>
-                                        <span class="badge bg-success mb-1">React</span>
+                                        <h6 class="fw-bold text-coral">Librerías</h6>
+                                        <span class="badge bg-success mb-1 skill-badge">jQuery</span>
+                                        <span class="badge bg-success mb-1 skill-badge">Vue.js</span>
+                                        <span class="badge bg-success mb-1 skill-badge">React</span>
                                     </div>
                                     <div class="col-md-3">
-                                        <h6>APIs</h6>
-                                        <span class="badge bg-warning mb-1">Google Maps</span>
-                                        <span class="badge bg-warning mb-1">REST APIs</span>
-                                        <span class="badge bg-warning mb-1">JSON</span>
+                                        <h6 class="fw-bold text-coral">APIs</h6>
+                                        <span class="badge bg-warning mb-1 skill-badge">Google Maps</span>
+                                        <span class="badge bg-warning mb-1 skill-badge">REST APIs</span>
+                                        <span class="badge bg-warning mb-1 skill-badge">JSON</span>
                                     </div>
                                     <div class="col-md-3">
-                                        <h6>Herramientas</h6>
-                                        <span class="badge bg-info mb-1">Git</span>
-                                        <span class="badge bg-info mb-1">Figma</span>
-                                        <span class="badge bg-info mb-1">VS Code</span>
+                                        <h6 class="fw-bold text-coral">Herramientas</h6>
+                                        <span class="badge bg-info mb-1 skill-badge">Git</span>
+                                        <span class="badge bg-info mb-1 skill-badge">Figma</span>
+                                        <span class="badge bg-info mb-1 skill-badge">VS Code</span>
                                     </div>
                                 </div>
                             </div>
@@ -116,7 +132,7 @@
                     </div>
                     
                     <div class="col-12">
-                        <div class="card">
+                        <div class="card border-0 shadow-sm">
                             <div class="card-body">
                                 <h5 class="card-title fw-bold text-coral">
                                     <i class="bi bi-chat-quote me-2"></i>
@@ -137,13 +153,13 @@
                     </div>
                 </div>
                 
-                <div class="mt-5">
+                <div class="text-center mt-5">
                     <h4 class="fw-bold mb-3">Conectemos</h4>
-                    <div class="d-flex justify-content-center gap-3">
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
                         <a href="#" class="btn btn-outline-primary">
                             <i class="bi bi-linkedin me-2"></i>LinkedIn
                         </a>
-                        <a href="https://github.com/valesa2304-dev" class="btn btn-outline-dark">
+                        <a href="https://github.com/valesa2304-dev" target="_blank" class="btn btn-outline-dark">
                             <i class="bi bi-github me-2"></i>GitHub
                         </a>
                         <a href="mailto:valesa2304@gmail.com" class="btn btn-outline-danger">
@@ -157,11 +173,13 @@
 
     <footer class="footer py-4 bg-dark text-white">
         <div class="container">
-            <small>© <span id="year"></span> Cevichería El Pueblo. Desarrollado por Valery Chavarría Sandí</small>
+            <div class="text-center">
+                <small>© <span id="year"></span> Cevichería El Pueblo. Desarrollado por Valery Chavarría Sandí</small>
+            </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/app.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>

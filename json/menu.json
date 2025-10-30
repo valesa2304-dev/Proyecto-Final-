@@ -5,7 +5,7 @@
         "desc": "La combinación perfecta: pescado fresco, camarón y calamar marinados en limón con cebolla morada, culantro y nuestro toque secreto.",
         "price": 4500,
         "category": "ceviches",
-        "image": "/img/ceviche.png",
+        "image": "/img/ceviche-mixto.png",
         "tag": "Más Vendido",
         "alt": "Ceviche mixto fresco con camarones"
     },
@@ -13,18 +13,18 @@
         "id": 2,
         "name": "Ceviche de Pescado",
         "desc": "Puro sabor del mar. Pescado fresco marinado al punto perfecto con limón, cebolla y especias seleccionadas.",
-        "price": 3800,
+        "price": 3500,
         "category": "ceviches",
-        "image": "/img/ceviche.png",
+        "image": "/img/ceviche-pescado.png",
         "alt": "Ceviche de pescado tradicional"
     },
     {
         "id": 3,
         "name": "Ceviche Costeño",
         "desc": "Nuestra receta especial con ingredientes secretos que le dan un sabor único y auténticamente costeño.",
-        "price": 5000,
+        "price": 3800,
         "category": "ceviches",
-        "image": "/img/costeño.jpeg",
+        "image": "/img/ceviche-costeno.png",
         "tag": "Especialidad",
         "alt": "Ceviche costeño especial"
     },
@@ -34,7 +34,7 @@
         "desc": "Pescado entero frito al punto perfecto: crocante por fuera, jugoso por dentro. Acompañado de patacones y ensalada.",
         "price": 6500,
         "category": "pescados",
-        "image": "/img/vuelve a la vida.png",
+        "image": "/img/pescado-frito.png",
         "tag": "Recomendado",
         "alt": "Pescado frito entero con acompañamientos"
     },
@@ -42,9 +42,9 @@
         "id": 5,
         "name": "Caldosa Tradicional",
         "desc": "Sopa reconfortante con yuca, especias y el toque especial de la casa. Perfecta para días fríos o cuando necesitas comfort food.",
-        "price": 2000,
+        "price": 3500,
         "category": "sopas",
-        "image": "/img/presbere.png",
+        "image": "/img/caldosa.png",
         "alt": "Caldosa tradicional humeante"
     },
     {
@@ -53,16 +53,16 @@
         "desc": "Refrescante limonada preparada con limones frescos, perfecta para acompañar cualquier platillo.",
         "price": 1200,
         "category": "bebidas",
-        "image": "/img/menu.jpg",
+        "image": "/img/limonada.png",
         "alt": "Limonada natural refrescante"
     },
     {
         "id": 7,
         "name": "Promoción Familiar",
         "desc": "Combo especial para 4 personas: ceviche mixto + pescado frito + 4 bebidas. ¡Perfecto para compartir!",
-        "price": 12000,
+        "price": 8000,
         "category": "promociones",
-        "image": "/img/promos.png",
+        "image": "/img/promocion-familiar.png",
         "tag": "Oferta",
         "alt": "Promoción familiar especial"
     }
