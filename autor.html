@@ -1,185 +1,359 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Información del Autor — Cevichería El Pueblo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./css/styles.css" />
-    <style>
-        .autor-img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border: 5px solid var(--coral);
-        }
-        .skill-badge {
-            font-size: 0.8rem;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autor - Cevichería El Pueblo</title>
+    <meta name="description" content="Conoce a Valery Chavarría Sandí, desarrolladora web y creadora del sitio web de Cevichería El Pueblo">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/autor.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient sticky-top shadow-sm">
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
         <div class="container">
-            <a class="navbar-brand fw-bold d-flex align-items-center" href="./">
-                <i class="bi bi-shop me-2 fs-4"></i>
-                Cevichería El Pueblo
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="./">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./historia.html">Historia</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./menu.html">Menú</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./servicios.html">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./galeria.html">Galería</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./ubicacion.html">Ubicación</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./acerca.html">Acerca</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="./autor.html">Autor</a></li>
-                </ul>
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="img/logo.jpg" alt="Cevichería El Pueblo" class="logo-img">
+                    <span class="logo-text">Cevichería<br>El Pueblo</span>
+                </a>
+                
+                <nav class="nav">
+                    <a href="index.html">Inicio</a>
+                    <a href="menu.html">Menú</a>
+                    <a href="acerca.html">Acerca</a>
+                    <a href="historia.html">Historia</a>
+                    <a href="servicios.html">Servicios</a>
+                    <a href="multimedia.html">Multimedia</a>
+                    <a href="autor.html" class="active">Autor</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+                
+                <div class="header-cta">
+                    <a href="https://wa.me/50663199969" class="btn btn-primary btn-small" target="_blank">
+                        <i class="bi bi-whatsapp"></i>Ordenar
+                    </a>
+                </div>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <main class="container py-5">
-        <div class="row align-items-center">
-            <div class="col-lg-8 mx-auto">
-                <div class="text-center mb-5">
-                    <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" 
-                         style="width: 200px; height: 200px; border: 5px solid var(--coral);">
-                        <i class="bi bi-person-circle fs-1 text-coral"></i>
-                    </div>
-                    <h1 class="fw-bold mb-3">Valery Chavarría Sandí</h1>
-                    <p class="lead text-muted mb-4">Desarrolladora Web & Estudiante de Ingeniería del Software</p>
-                </div>
-                
-                <div class="row g-4 text-start">
-                    <div class="col-md-6">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold text-coral">
-                                    <i class="bi bi-person-vcard me-2"></i>
-                                    Información Personal
-                                </h5>
-                                <ul class="list-unstyled">
-                                    <li class="mb-2"><strong>Cédula:</strong> 119030888</li>
-                                    <li class="mb-2"><strong>Nombre completo:</strong> Valery Chavarría Sandí</li>
-                                    <li class="mb-2"><strong>Email:</strong> valesa2304@gmail.com</li>
-                                    <li class="mb-2"><strong>Teléfono:</strong> +506 6244-8250</li>
-                                    <li class="mb-0"><strong>Ubicación:</strong> Heredia, Costa Rica</li>
-                                </ul>
-                            </div>
-                        </div>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero autor-hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <img src="img/fondo.jpg" alt="Cevichería El Pueblo" class="hero-bg-image">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <i class="bi bi-code-slash"></i>Desarrolladora Web
                     </div>
                     
-                    <div class="col-md-6">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold text-coral">
-                                    <i class="bi bi-book me-2"></i>
-                                    Formación Académica
-                                </h5>
-                                <ul class="list-unstyled">
-                                    <li class="mb-2"><i class="bi bi-mortarboard text-coral me-2"></i>Ingeniería del Software - Universidad Técnica Nacional</li>
-                                    <li class="mb-2"><i class="bi bi-laptop text-coral me-2"></i>Desarrollo Web Full Stack</li>
-                                    <li class="mb-2"><i class="bi bi-file-code text-coral me-2"></i>Certificación en JavaScript Moderno</li>
-                                    <li class="mb-0"><i class="bi bi-palette text-coral me-2"></i>Especialización en UX/UI Design</li>
-                                </ul>
-                            </div>
+                    <h1 class="hero-title">
+                        Valery Chavarría <span>Sandí</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        Desarrolladora web apasionada por crear experiencias digitales que combinen 
+                        funcionalidad, estética y accesibilidad. Creadora del sitio web de Cevichería El Pueblo.
+                    </p>
+
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Proyectos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Años experiencia</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Compromiso</span>
                         </div>
                     </div>
-                    
-                    <div class="col-12">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold text-coral">
-                                    <i class="bi bi-tools me-2"></i>
-                                    Habilidades Técnicas
-                                </h5>
-                                <div class="row g-3">
-                                    <div class="col-md-3">
-                                        <h6 class="fw-bold text-coral">Frontend</h6>
-                                        <span class="badge bg-primary mb-1 skill-badge">HTML5</span>
-                                        <span class="badge bg-primary mb-1 skill-badge">CSS3</span>
-                                        <span class="badge bg-primary mb-1 skill-badge">JavaScript</span>
-                                        <span class="badge bg-primary mb-1 skill-badge">Bootstrap 5</span>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <h6 class="fw-bold text-coral">Librerías</h6>
-                                        <span class="badge bg-success mb-1 skill-badge">jQuery</span>
-                                        <span class="badge bg-success mb-1 skill-badge">Vue.js</span>
-                                        <span class="badge bg-success mb-1 skill-badge">React</span>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <h6 class="fw-bold text-coral">APIs</h6>
-                                        <span class="badge bg-warning mb-1 skill-badge">Google Maps</span>
-                                        <span class="badge bg-warning mb-1 skill-badge">REST APIs</span>
-                                        <span class="badge bg-warning mb-1 skill-badge">JSON</span>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <h6 class="fw-bold text-coral">Herramientas</h6>
-                                        <span class="badge bg-info mb-1 skill-badge">Git</span>
-                                        <span class="badge bg-info mb-1 skill-badge">Figma</span>
-                                        <span class="badge bg-info mb-1 skill-badge">VS Code</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-12">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold text-coral">
-                                    <i class="bi bi-chat-quote me-2"></i>
-                                    Sobre Mí
-                                </h5>
-                                <p class="mb-3">
-                                    Soy una desarrolladora web apasionada por crear experiencias digitales que combinen 
-                                    funcionalidad, estética y accesibilidad. Me encanta resolver problemas complejos 
-                                    mediante código limpio y eficiente.
-                                </p>
-                                <p class="mb-0">
-                                    Este proyecto para la Cevichería El Pueblo representa mi compromiso con el desarrollo 
-                                    web moderno, aplicando las mejores prácticas y tecnologías actuales para crear 
-                                    una plataforma que realmente sirva a los usuarios.
-                                </p>
-                            </div>
-                        </div>
+
+                    <div class="hero-buttons">
+                        <a href="#informacion" class="btn btn-accent">
+                            <i class="bi bi-person-badge"></i>Más Información
+                        </a>
+                        <a href="#contacto" class="btn btn-secondary">
+                            <i class="bi bi-envelope"></i>Contactar
+                        </a>
                     </div>
                 </div>
                 
-                <div class="text-center mt-5">
-                    <h4 class="fw-bold mb-3">Conectemos</h4>
-                    <div class="d-flex justify-content-center gap-3 flex-wrap">
-                        <a href="#" class="btn btn-outline-primary">
-                            <i class="bi bi-linkedin me-2"></i>LinkedIn
-                        </a>
-                        <a href="https://github.com/valesa2304-dev" target="_blank" class="btn btn-outline-dark">
-                            <i class="bi bi-github me-2"></i>GitHub
-                        </a>
-                        <a href="mailto:valesa2304@gmail.com" class="btn btn-outline-danger">
-                            <i class="bi bi-envelope me-2"></i>Email
-                        </a>
+                <div class="hero-image">
+                    <div class="autor-avatar">
+                        <i class="bi bi-person-circle"></i>
+                    </div>
+                    <div class="floating-badge">Desarrolladora</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INFORMACIÓN PERSONAL ===== -->
+    <section class="section" id="informacion">
+        <div class="container">
+            <div class="section-header">
+                <h2>Información Personal</h2>
+                <p>Datos de contacto y formación académica</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-person-vcard"></i>
+                    </div>
+                    <h3>Datos Personales</h3>
+                    <div class="personal-info">
+                        <p><strong>Cédula:</strong> 119030888</p>
+                        <p><strong>Nombre:</strong> Valery Chavarría Sandí</p>
+                        <p><strong>Email:</strong> valesa2304@gmail.com</p>
+                        <p><strong>Teléfono:</strong> +506 6244-8250</p>
+                        <p><strong>Ubicación:</strong> Heredia, Costa Rica</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-mortarboard"></i>
+                    </div>
+                    <h3>Formación Académica</h3>
+                    <div class="education-info">
+                        <div class="education-item">
+                            <h4>Ingeniería del Software</h4>
+                            <p>Universidad Técnica Nacional</p>
+                        </div>
+                        <div class="education-item">
+                            <h4>Desarrollo Web Full Stack</h4>
+                            <p>Bootcamp especializado</p>
+                        </div>
+                        <div class="education-item">
+                            <h4>Certificación en JavaScript Moderno</h4>
+                            <p>ES6+, APIs, Frameworks</p>
+                        </div>
+                        <div class="education-item">
+                            <h4>Especialización en UX/UI Design</h4>
+                            <p>Diseño centrado en el usuario</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <footer class="footer py-4 bg-dark text-white">
+    <!-- ===== HABILIDADES TÉCNICAS ===== -->
+    <section class="section skills-section">
         <div class="container">
-            <div class="text-center">
-                <small>© <span id="year"></span> Cevichería El Pueblo. Desarrollado por Valery Chavarría Sandí</small>
+            <div class="section-header">
+                <h2>Habilidades Técnicas</h2>
+                <p>Tecnologías y herramientas que domino</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="bi bi-code-slash"></i> Frontend</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Bootstrap 5</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="bi bi-boxes"></i> Librerías</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">jQuery</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">React</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="bi bi-plug"></i> APIs</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Google Maps</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">JSON</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="bi bi-tools"></i> Herramientas</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- ===== SOBRE MÍ ===== -->
+    <section class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sobre Mí</h2>
+                <p>Mi pasión por el desarrollo web</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="img/diseñadora.jpeg" alt="Valery Chavarría Sandí" class="profile-image">
+                    <div class="image-frame"></div>
+                </div>
+                
+                <div class="about-text">
+                    <div class="about-intro">
+                        <h3>Valery Chavarría Sandí</h3>
+                        <p class="title">Desarrolladora Web Full Stack</p>
+                    </div>
+                    
+                    <div class="about-description">
+                        <p>
+                            <i class="bi bi-quote"></i>
+                            Soy una desarrolladora web apasionada por crear experiencias digitales que combinen 
+                            funcionalidad, estética y accesibilidad. Me encanta resolver problemas complejos 
+                            mediante código limpio y eficiente.
+                        </p>
+                        
+                        <p>
+                            Este proyecto para la <strong>Cevichería El Pueblo</strong> representa mi compromiso con el desarrollo 
+                            web moderno, aplicando las mejores prácticas y tecnologías actuales para crear 
+                            una plataforma que realmente sirva a los usuarios.
+                        </p>
+                        
+                        <p>
+                            Creo firmemente que el buen diseño no solo debe verse bien, sino que también debe 
+                            funcionar perfectamente y ser accesible para todos.
+                        </p>
+                    </div>
+                    
+                    <div class="about-values">
+                        <div class="value-item">
+                            <i class="bi bi-lightbulb"></i>
+                            <span>Innovación</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="bi bi-heart"></i>
+                            <span>Pasión</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="bi bi-award"></i>
+                            <span>Calidad</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="bi bi-people"></i>
+                            <span>Colaboración</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section class="section contact-section" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <h2>Conectemos</h2>
+                <p>¿Tienes un proyecto en mente? Hablemos</p>
+            </div>
+            
+            <div class="contact-buttons">
+                <a href="#" class="btn btn-primary btn-large">
+                    <i class="bi bi-linkedin"></i>LinkedIn
+                </a>
+                <a href="https://github.com/valesa2304-dev" class="btn btn-secondary btn-large" target="_blank">
+                    <i class="bi bi-github"></i>GitHub
+                </a>
+                <a href="mailto:valesa2304@gmail.com" class="btn btn-accent btn-large">
+                    <i class="bi bi-envelope"></i>Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="img/logo.jpg" alt="Cevichería El Pueblo" class="footer-logo-img">
+                        <span class="footer-logo-text">Cevichería El Pueblo</span>
+                    </div>
+                    <p class="footer-description">
+                        Auténtico sabor costeño con tradición familiar. Servimos felicidad en cada plato desde 2015.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Desarrollado por</h4>
+                    <div class="developer-info">
+                        <p><strong>Valery Chavarría Sandí</strong></p>
+                        <p>Desarrolladora Web</p>
+                        <p>valesa2304@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <div class="footer-links">
+                        <a href="index.html" class="footer-link">Inicio</a>
+                        <a href="menu.html" class="footer-link">Menú</a>
+                        <a href="autor.html" class="footer-link">Autor</a>
+                        <a href="contacto.html" class="footer-link">Contacto</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cevichería El Pueblo. Desarrollado por Valery Chavarría Sandí</p>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/app.js"></script>
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Header fijo al hacer scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Navegación suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });s
+                }
+            });
+        });
+    </script>
 </body>
 </html>
