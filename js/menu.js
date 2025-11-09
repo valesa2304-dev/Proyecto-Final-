@@ -1,209 +1,102 @@
-// menu.js - Funcionalidades específicas para la página del menú
-document.addEventListener('DOMContentLoaded', function() {
-    // Función auxiliar para animar contadores
-    function animateCounter(element, target, suffix = '') {
-        let current = 0;
-        const increment = target / 30;
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                element.textContent = target + suffix;
-                clearInterval(timer);
-            } else {
-                element.textContent = Math.floor(current) + suffix;
-            }
-        }, 50);
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    const cartBtn = document.getElementById('cartButton');
+    const cartDrawer = document.getElementById('cartDrawer');
+    const closeCart = document.getElementById('closeCart');
+    const cartItemsEl = document.getElementById('cartItems');
+    const subtotalEl = document.getElementById('cartSubtotal');
+    const countEl = document.getElementById('cartCount');
+    const checkoutBtn = document.getElementById('checkoutBtn');
+    const clearBtn = document.getElementById('clearCartBtn');
 
-    // Contador animado para stats del hero del menú
-    function animateMenuStats() {
-        const stats = document.querySelectorAll('.menu-hero .stat-number');
-        if (stats.length >= 3) {
-            animateCounter(stats[0], 100, '%');
-            animateCounter(stats[1], 8, '+');
-            animateCounter(stats[2], 50, '+');
-        }
-    }
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Navegación suave entre categorías
-    document.querySelectorAll('.category-card, .nav a[href^="#"]').forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href.startsWith('#')) {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    const headerHeight = document.querySelector('.header').offsetHeight;
-                    const targetPosition = target.offsetTop - headerHeight - 20;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Resaltar categoría activa
-                    highlightActiveCategory(href);
-                }
-            }
-        });
-    });
+    const toNumber = (colones) => Number((colones || '').replace(/[^\d]/g, '')) || 0;
+    const fmt = (n) => '₡' + (n || 0).toLocaleString('es-CR');
 
-    // Función para resaltar categoría activa
-    function highlightActiveCategory(categoryId) {
-        document.querySelectorAll('.category-card').forEach(card => {
-            card.classList.remove('active');
-        });
-        
-        const activeCard = document.querySelector(`[href="${categoryId}"]`);
-        if (activeCard) {
-            activeCard.classList.add('active');
-        }
-    }
-
-    // Observer para animaciones de categorías
-    const categoryObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                entry.target.style.transition = 'all 0.6s ease-out';
-                
-                // Resaltar categoría en vista
-                const categoryId = '#' + entry.target.id;
-                highlightActiveCategory(categoryId);
-            }
-        });
-    }, {
-        threshold: 0.3,
-        rootMargin: '0px 0px -100px 0px'
-    });
-
-    // Observar categorías del menú
-    document.querySelectorAll('.menu-category').forEach(category => {
-        category.style.opacity = '0';
-        category.style.transform = 'translateY(30px)';
-        categoryObserver.observe(category);
-    });
-
-    // Funcionalidad de favoritos
-    document.querySelectorAll('.favorite-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            this.classList.toggle('active');
-            
-            const itemTitle = this.closest('.menu-item').querySelector('.item-title').textContent;
-            if (this.classList.contains('active')) {
-                showNotification(`"${itemTitle}" agregado a favoritos`, 'success');
-            } else {
-                showNotification(`"${itemTitle}" removido de favoritos`, 'info');
-            }
-        });
-    });
-
-    // Notificación temporal
-    function showNotification(message, type = 'info') {
-        const notification = document.createElement('div');
-        notification.className = `notification ${type}`;
-        notification.innerHTML = `
-            <i class="bi bi-${type === 'success' ? 'check-circle' : 'info-circle'} me-2"></i>
-            ${message}
-        `;
-        
-        notification.style.cssText = `
-            position: fixed;
-            top: 100px;
-            right: 30px;
-            background: white;
-            color: #333;
-            padding: 1rem 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            z-index: 10000;
-            border-left: 4px solid ${type === 'success' ? 'var(--success)' : 'var(--sea-teal)'};
-            transform: translateX(400px);
-            transition: transform 0.3s ease;
-            max-width: 300px;
-        `;
-        
-        document.body.appendChild(notification);
-        
-        // Animación de entrada
-        setTimeout(() => {
-            notification.style.transform = 'translateX(0)';
-        }, 100);
-        
-        // Auto-remover después de 3 segundos
-        setTimeout(() => {
-            notification.style.transform = 'translateX(400px)';
-            setTimeout(() => {
-                if (notification.parentNode) {
-                    notification.parentNode.removeChild(notification);
-                }
-            }, 300);
-        }, 3000);
-    }
-
-    // Iniciar contadores cuando el hero sea visible
-    const menuHeroObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateMenuStats();
-                menuHeroObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    const menuHero = document.querySelector('.menu-hero');
-    if (menuHero) {
-        menuHeroObserver.observe(menuHero);
-    } else {
-        console.warn('Elemento .menu-hero no encontrado');
-    }
-
-    // Efectos de hover mejorados para items del menú
-    document.querySelectorAll('.menu-item').forEach(item => {
-        item.addEventListener('mouseenter', function() {
-            this.style.zIndex = '10';
-        });
-        
-        item.addEventListener('mouseleave', function() {
-            this.style.zIndex = '1';
-        });
-    });
-
-    // Filtrado por categorías (para futura implementación)
-    function filterMenu(category) {
-        const allItems = document.querySelectorAll('.menu-item');
-        const categories = document.querySelectorAll('.menu-category');
-        
-        if (category === 'all') {
-            allItems.forEach(item => item.style.display = 'block');
-            categories.forEach(cat => cat.style.display = 'block');
+    function updateCart() {
+        if (!cart.length) {
+            cartItemsEl.innerHTML = '<p class="cart-empty">Tu carrito está vacío.</p>';
         } else {
-            categories.forEach(cat => {
-                if (cat.id === category) {
-                    cat.style.display = 'block';
-                } else {
-                    cat.style.display = 'none';
-                }
-            });
+            cartItemsEl.innerHTML = cart.map(i => `
+        <div class="cart-row">
+          <div class="cart-row-info">
+            <strong>${i.name}</strong>
+            <span>${fmt(i.price)} c/u</span>
+          </div>
+          <div class="cart-row-actions">
+            <button class="qty-btn dec" data-id="${i.id}">–</button>
+            <span class="qty">${i.qty}</span>
+            <button class="qty-btn inc" data-id="${i.id}">+</button>
+            <button class="del" data-id="${i.id}" title="Eliminar"><i class="bi bi-trash3"></i></button>
+          </div>
+        </div>
+      `).join('');
         }
-        
-        // Scroll to top después de filtrar
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+        subtotalEl.textContent = fmt(total);
+        countEl.textContent = cart.reduce((s, i) => s + i.qty, 0);
+        localStorage.setItem('cart', JSON.stringify(cart));
     }
 
-    console.log('🍽️ Menú premium cargado correctamente');
+    cartBtn.addEventListener('click', () => cartDrawer.classList.add('open'));
+    closeCart.addEventListener('click', () => cartDrawer.classList.remove('open'));
+    clearBtn.addEventListener('click', () => { cart = []; updateCart(); });
+
+    document.body.addEventListener('click', (e) => {
+        const add = e.target.closest('.add-to-cart');
+        if (add) {
+            const card = add.closest('.menu-item');
+            if (!card) return;
+            const id = Number(card.dataset.id);
+            const name = card.querySelector('.item-title')?.textContent.trim() || 'Producto';
+            const price = toNumber(card.querySelector('.item-price')?.textContent);
+
+            const found = cart.find(x => x.id === id);
+            found ? found.qty++ : cart.push({ id, name, price, qty: 1 });
+
+            updateCart();
+            cartDrawer.classList.add('open');
+        }
+
+        const inc = e.target.closest('.inc');
+        const dec = e.target.closest('.dec');
+        const del = e.target.closest('.del');
+        if (inc) changeQty(Number(inc.dataset.id), +1);
+        if (dec) changeQty(Number(dec.dataset.id), -1);
+        if (del) removeItem(Number(del.dataset.id));
+    });
+
+    function changeQty(id, d) {
+        const it = cart.find(i => i.id === id);
+        if (!it) return;
+        it.qty += d;
+        if (it.qty <= 0) cart = cart.filter(i => i.id !== id);
+        updateCart();
+    }
+    function removeItem(id) {
+        cart = cart.filter(i => i.id !== id);
+        updateCart();
+    }
+
+    checkoutBtn.addEventListener('click', () => {
+        if (!cart.length) return;
+        const lines = cart.map(i => `• ${i.name} x${i.qty} - ${fmt(i.price * i.qty)}`).join('%0A');
+        const total = fmt(cart.reduce((s, i) => s + i.price * i.qty, 0));
+        const msg = `¡Hola! Quiero realizar este pedido:%0A%0A${lines}%0A%0ATotal: ${total}`;
+        window.open(`https://wa.me/50663199969?text=${msg}`, '_blank');
+    });
+
+    // Smooth scroll para anclas
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            const t = document.querySelector(a.getAttribute('href'));
+            if (!t) return;
+            e.preventDefault();
+            const headerH = document.querySelector('.header')?.offsetHeight || 0;
+            const y = t.getBoundingClientRect().top + window.scrollY - headerH - 8;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        });
+    });
+
+    updateCart();
 });
-
-// Funciones globales específicas del menú
-function addToCart(itemName, price) {
-    const message = `¡Hola! Quiero agregar a mi pedido: ${itemName} - ₡${price}`;
-    const url = `https://wa.me/50663199969?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
-}
-
-function customizeItem(itemName) {
-    // Para futura implementación de personalización de platillos
-    console.log(`Personalizando: ${itemName}`);
-    showNotification(`Próximamente podrás personalizar "${itemName}"`, 'info');
-}
