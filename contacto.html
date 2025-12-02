@@ -17,85 +17,130 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- ===== HEADER ===== -->
-<header class="header" id="header">
-    <div class="container">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="img/logo.jpg" alt="Cevichería El Pueblo" class="logo-img">
-                <span class="logo-text">Cevichería<br>El Pueblo</span>
-            </a>
-            
-            <nav class="nav">
-                <a href="#inicio" class="active">Inicio</a>
-                <a href="menu.html">Menú</a>
-                <a href="acerca.html">Acerca</a>
-                <a href="historia.html">Historia</a>
-                <a href="servicios.html">Servicios</a>
-                <a href="multimedia.html">Multimedia</a>
-                <a href="autor.html">Autor</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
-            
-            <div class="header-cta">
-                <a href="https://wa.me/50663199969" class="btn btn-primary btn-small" target="_blank">
-                    <i class="bi bi-whatsapp"></i>Ordenar
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="img/logo.jpg" alt="Cevichería El Pueblo" class="logo-img">
+                    <span class="logo-text">Cevichería<br>El Pueblo</span>
                 </a>
+                
+                <nav class="nav">
+                    <a href="index.html">Inicio</a>
+                    <a href="menu.html">Menú</a>
+                    <a href="acerca.html">Acerca</a>
+                    <a href="historia.html">Historia</a>
+                    <a href="autor.html">Autor</a>
+                    <a href="contacto.html" class="active">Contacto</a>
+                </nav>
+                
+                <div class="header-cta">
+                    <a href="https://wa.me/50663199969" class="btn btn-primary btn-small" target="_blank">
+                        <i class="bi bi-whatsapp"></i>Ordenar
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <!-- ===== CONTACT SECTION ===== -->
     <section class="section contact-section">
         <div class="container">
             <div class="section-header">
-                <h2>Contáctanos</h2>
-                <p>Estamos aquí para atenderte. ¡Escríbenos o visítanos!</p>
+                <h2>Formulario de Contacto</h2>
+                <p>Completa la información solicitada para ponerte en contacto con Cevichería El Pueblo.</p>
             </div>
 
             <div class="contact-content">
-                <!-- Formulario de Contacto -->
+                <!-- ===== FORMULARIO (REQUISITOS DEL PDF) ===== -->
                 <div class="contact-form-container">
                     <div class="form-header">
-                        <h3>Formulario de Contacto</h3>
-                        <p>¿Tienes preguntas, comentarios o quieres hacer un pedido especial? Escríbenos y te responderemos pronto.</p>
+                        <h3>Escríbenos</h3>
+                        <p>Todos los campos marcados con * son obligatorios.</p>
                     </div>
 
                     <form class="contact-form" id="contactForm">
+                        <!-- Nombre + Correo -->
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="nombre">Nombre completo *</label>
                                 <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
                             </div>
                             <div class="form-group">
-                                <label for="email">Email *</label>
+                                <label for="email">Correo electrónico *</label>
                                 <input type="email" id="email" name="email" required placeholder="tu@email.com">
                             </div>
                         </div>
 
+                        <!-- Fecha nacimiento + Teléfono -->
                         <div class="form-row">
+                            <div class="form-group">
+                                <label for="fecha">Fecha de nacimiento *</label>
+                                <input type="date" id="fecha" name="fecha" required>
+                            </div>
                             <div class="form-group">
                                 <label for="telefono">Teléfono *</label>
                                 <input type="tel" id="telefono" name="telefono" required placeholder="+506 0000-0000">
                             </div>
+                        </div>
+
+                        <!-- Edad (oculta) -->
+                        <input type="hidden" id="edad" name="edad">
+
+                        <!-- Rango ingreso + Género -->
+                        <div class="form-row">
                             <div class="form-group">
-                                <label for="asunto">Asunto *</label>
-                                <select id="asunto" name="asunto" required>
-                                    <option value="">Selecciona una opción</option>
-                                    <option value="reserva">Reserva de Mesa</option>
-                                    <option value="pedido">Pedido Especial</option>
-                                    <option value="consulta">Consulta General</option>
-                                    <option value="queja">Queja o Sugerencia</option>
-                                    <option value="trabajo">Trabaja con Nosotros</option>
-                                    <option value="evento">Evento Especial</option>
+                                <label for="ingreso">Rango de ingreso mensual *</label>
+                                <select id="ingreso" name="ingreso" required>
+                                    <option value="">Seleccione</option>
+                                    <option>Menos de ₡200.000</option>
+                                    <option>₡200.000 - ₡400.000</option>
+                                    <option>₡400.000 - ₡600.000</option>
+                                    <option>Más de ₡600.000</option>
                                 </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Género *</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="genero" value="Femenino" required> Femenino</label>
+                                    <label><input type="radio" name="genero" value="Masculino"> Masculino</label>
+                                    <label><input type="radio" name="genero" value="Otro"> Otro</label>
+                                </div>
                             </div>
                         </div>
 
+                        <!-- Grado académico múltiple -->
+                        <div class="form-group">
+                            <label for="grado">Grado académico (puede seleccionar más de uno) *</label>
+                            <select id="grado" name="grado" multiple required>
+                                <option>Secundaria incompleta</option>
+                                <option>Secundaria completa</option>
+                                <option>Técnico</option>
+                                <option>Diplomado</option>
+                                <option>Bachillerato</option>
+                                <option>Licenciatura</option>
+                                <option>Posgrado</option>
+                            </select>
+                            <small class="help-text">Mantén presionada la tecla CTRL (o CMD en Mac) para seleccionar varias opciones.</small>
+                        </div>
+
+                        <!-- Asunto -->
+                        <div class="form-group">
+                            <label for="asunto">Asunto *</label>
+                            <select id="asunto" name="asunto" required>
+                                <option value="">Seleccione</option>
+                                <option>Reserva de mesa</option>
+                                <option>Pedido para llevar</option>
+                                <option>Consulta general</option>
+                                <option>Sugerencia o queja</option>
+                            </select>
+                        </div>
+
+                        <!-- Mensaje -->
                         <div class="form-group">
                             <label for="mensaje">Mensaje *</label>
-                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos cómo podemos ayudarte..." required></textarea>
+                            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-accent btn-large">
@@ -104,7 +149,7 @@
                     </form>
                 </div>
 
-                <!-- Información de Contacto -->
+                <!-- ===== INFO LATERAL ===== -->
                 <div class="contact-info-sidebar">
                     <!-- Teléfonos -->
                     <div class="contact-card">
@@ -129,88 +174,47 @@
                             <i class="bi bi-whatsapp"></i>
                             <h4>WhatsApp</h4>
                         </div>
-                        <div class="contact-card-content">
-                            <p>Haz tu pedido directamente por WhatsApp. Respondemos rápido.</p>
-                            <a href="https://wa.me/50663199969?text=¡Hola!%20Me%20gustaría%20hacer%20un%20pedido%20o%20consultar%20sobre..." class="btn-whatsapp" target="_blank">
-                                <i class="bi bi-whatsapp"></i>Chatear Ahora
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Ubicación -->
-                    <div class="contact-card">
-                        <div class="contact-card-header">
-                            <i class="bi bi-geo-alt"></i>
-                            <h4>Ubicación</h4>
-                        </div>
-                        <div class="contact-card-content">
-                            <p><strong>San Juan de Santa Bárbara, Heredia</strong></p>
-                            <p class="location-description">Fácil acceso y amplio parqueo disponible</p>
-                            <a href="https://maps.google.com/?q=San+Juan+de+Santa+Bárbara+Heredia" class="btn-map" target="_blank">
-                                <i class="bi bi-map"></i>Ver en Maps
-                            </a>
-                        </div>
+                        <p>Envíanos un mensaje para pedidos y consultas.</p>
+                        <a href="https://wa.me/50663199969" class="btn btn-accent btn-small" target="_blank">
+                            <i class="bi bi-whatsapp"></i>Escribir por WhatsApp
+                        </a>
                     </div>
 
                     <!-- Horarios -->
                     <div class="contact-card">
                         <div class="contact-card-header">
                             <i class="bi bi-clock"></i>
-                            <h4>Horarios</h4>
+                            <h4>Horarios de Atención</h4>
                         </div>
-                        <div class="contact-card-content">
-                            <div class="schedule-item">
-                                <span class="days">Lunes, Miércoles, Viernes:</span>
-                                <span class="hours">4:00 PM - 10:00 PM</span>
-                            </div>
-                            <div class="schedule-item">
-                                <span class="days">Martes:</span>
-                                <span class="hours closed">Cerrado</span>
-                            </div>
-                            <div class="schedule-item">
-                                <span class="days">Sábado y Domingo:</span>
-                                <span class="hours">12:00 MD - 11:00 PM</span>
-                            </div>
-                        </div>
+                        <p><strong>Lunes, miércoles y viernes:</strong> 4:00 PM - 10:00 PM</p>
+                        <p><strong>Sábado y domingo:</strong> 12:00 MD - 11:00 PM</p>
+                        <p class="text-muted"><strong>Martes:</strong> Cerrado</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== MAP SECTION ===== -->
-    <section class="section map-section">
+    <!-- ===== UBICACIÓN (DENTRO DE CONTACTO) ===== -->
+    <section class="section" id="ubicacion">
         <div class="container">
             <div class="section-header">
-                <h2>Encuéntranos</h2>
-                <p>Visítanos en nuestra ubicación en San Juan de Santa Bárbara</p>
+                <h2>¿Dónde estamos?</h2>
+                <p>Encuéntranos en San Juan de Santa Bárbara, Heredia.</p>
             </div>
-            <div class="map-container">
-                <div class="map-placeholder">
-                    <i class="bi bi-map"></i>
-                    <h3>Mapa de Ubicación</h3>
-                    <p>San Juan de Santa Bárbara, Heredia, Costa Rica</p>
-                    <a href="https://maps.google.com/?q=San+Juan+de+Santa+Bárbara+Heredia" class="btn btn-primary" target="_blank">
-                        <i class="bi bi-geo-alt"></i>Abrir en Google Maps
-                    </a>
-                </div>
-                <!-- Aquí puedes integrar un mapa real de Google Maps -->
-                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.71547832825!2d-84.158888724279!3d10.07488918906199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0fb6c9d6b5c7f%3A0x1a7e5e3c3b3b3b3b!2sSan%20Juan%2C%20Santa%20B%C3%A1rbara%2C%20Heredia!5e0!3m2!1ses!2scr!4v1234567890123!5m2!1ses!2scr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
-            </div>
-        </div>
-    </section>
 
-    <!-- ===== CTA SECTION ===== -->
-    <section class="cta">
-        <div class="container">
-            <h2>¿Listo para una Experiencia Inolvidable?</h2>
-            <p>Reserva tu mesa o ordena ahora para disfrutar del auténtico sabor del mar</p>
-            <div class="cta-buttons">
-                <a href="https://wa.me/50663199969" class="btn btn-accent btn-large" target="_blank">
-                    <i class="bi bi-whatsapp"></i>Ordenar por WhatsApp
-                </a>
-                <a href="tel:+50663199969" class="btn btn-secondary btn-large">
-                    <i class="bi bi-telephone"></i>Llamar para Reservar
+            <div class="map-container">
+                <iframe
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps?q=Cevicher%C3%ADa%20El%20Pueblo%20San%20Juan%20de%20Santa%20B%C3%A1rbara%20Heredia&z=18&output=embed">
+                </iframe>
+            </div>
+
+            <div class="text-center" style="margin-top: 1.5rem;">
+                <a href="https://maps.app.goo.gl/HYjaHHo6foBsCbmCA" class="btn btn-accent" target="_blank">
+                    <i class="bi bi-map"></i>Abrir en Google Maps
                 </a>
             </div>
         </div>
@@ -303,35 +307,73 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Cevichería El Pueblo. Todos los derechos reservados.</p>
+                <p>&copy; 2025 Cevichería El Pueblo. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- ===== JAVASCRIPT ===== -->
     <script>
-        // Manejo del formulario de contacto
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Aquí puedes agregar el código para enviar el formulario
-            // Por ahora, solo redirigirá a WhatsApp
-            const nombre = document.getElementById('nombre').value;
-            const telefono = document.getElementById('telefono').value;
-            const asunto = document.getElementById('asunto').value;
-            const mensaje = document.getElementById('mensaje').value;
-            
-            const whatsappMessage = `*Nuevo Mensaje de Contacto*%0A%0A*Nombre:* ${nombre}%0A*Teléfono:* ${telefono}%0A*Asunto:* ${asunto}%0A*Mensaje:* ${mensaje}`;
-            
-            window.open(`https://wa.me/50663199969?text=${whatsappMessage}`, '_blank');
+        // Calcular edad al cambiar la fecha
+        document.getElementById('fecha').addEventListener('change', function () {
+            const nacimiento = new Date(this.value);
+            const hoy = new Date();
+            let edad = hoy.getFullYear() - nacimiento.getFullYear();
+            const mes = hoy.getMonth() - nacimiento.getMonth();
+
+            if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
+                edad--;
+            }
+
+            document.getElementById('edad').value = edad;
         });
 
-        // Navegación suave
+        // Envío del formulario por correo (mailto)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nombre   = document.getElementById('nombre').value.trim();
+            const email    = document.getElementById('email').value.trim();
+            const telefono = document.getElementById('telefono').value.trim();
+            const fecha    = document.getElementById('fecha').value;
+            const edad     = document.getElementById('edad').value;
+            const ingreso  = document.getElementById('ingreso').value;
+            const generoEl = document.querySelector('input[name="genero"]:checked');
+            const genero   = generoEl ? generoEl.value : '';
+
+            const gradosSeleccionados = Array.from(document.getElementById('grado').selectedOptions)
+                .map(opt => opt.value)
+                .join(', ');
+
+            const asunto   = document.getElementById('asunto').value;
+            const mensaje  = document.getElementById('mensaje').value.trim();
+
+            const cuerpo = `
+Nombre: ${nombre}
+Correo: ${email}
+Teléfono: ${telefono}
+Fecha de nacimiento: ${fecha}
+Edad: ${edad}
+Ingreso mensual: ${ingreso}
+Género: ${genero}
+Grado académico: ${gradosSeleccionados}
+
+Asunto: ${asunto}
+
+Mensaje:
+${mensaje}
+            `;
+
+            const mailto = `mailto:cevicheriadelpueblo@gmail.com?subject=${encodeURIComponent('Contacto Web - ' + asunto)}&body=${encodeURIComponent(cuerpo)}`;
+            window.location.href = mailto;
+        });
+
+        // Navegación suave para enlaces internos (#)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
+                    e.preventDefault();
                     target.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
@@ -352,3 +394,5 @@
     </script>
 </body>
 </html>
+
+

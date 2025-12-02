@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="css/menu.css" />
 </head>
 <body>
-  <!-- ===== HEADER (sin servicios) ===== -->
+  <!-- ===== HEADER ===== -->
   <header class="header" id="header">
     <div class="container">
       <div class="nav-container">
@@ -31,7 +31,6 @@
           <a href="menu.html" class="active">Menú</a>
           <a href="acerca.html">Acerca</a>
           <a href="historia.html">Historia</a>
-          <a href="multimedia.html">Multimedia</a>
           <a href="autor.html">Autor</a>
           <a href="contacto.html">Contacto</a>
         </nav>
@@ -55,6 +54,47 @@
     </div>
   </section>
 
+  <!-- ===== SERVICIOS INTEGRADOS ===== -->
+  <section class="services-integrated">
+    <div class="container">
+      <h2 class="section-title">¿Cómo prefieres disfrutar?</h2>
+      <div class="services-grid">
+        <div class="service-option">
+          <div class="service-icon">
+            <i class="bi bi-house-door-fill"></i>
+          </div>
+          <h3>Comedor</h3>
+          <p>Experiencia completa en nuestro ambiente costeño</p>
+          <a href="https://wa.me/50663199969?text=¡Hola!%20Quiero%20reservar%20una%20mesa%20en%20el%20comedor" class="btn-service" target="_blank">
+            Reservar Mesa
+          </a>
+        </div>
+        
+        <div class="service-option">
+          <div class="service-icon">
+            <i class="bi bi-bag-fill"></i>
+          </div>
+          <h3>Take Away</h3>
+          <p>Recoge tu pedido en 15-20 minutos</p>
+          <a href="https://wa.me/50663199969?text=¡Hola!%20Quiero%20hacer%20un%20pedido%20para%20llevar" class="btn-service" target="_blank">
+            Pedir para Llevar
+          </a>
+        </div>
+        
+        <div class="service-option">
+          <div class="service-icon">
+            <i class="bi bi-bicycle"></i>
+          </div>
+          <h3>Delivery</h3>
+          <p>Recibe en tu casa con Uber Eats</p>
+          <a href="https://www.ubereats.com/cr/store/cevichera-del-pueblo-san-juan/DhzErxhyXyS5MtAgdX7HrQ" class="btn-service" target="_blank">
+            Ordenar en Uber Eats
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== CATEGORÍAS ===== -->
   <section id="categorias" class="categorias">
     <div class="container">
@@ -71,42 +111,108 @@
   <!-- ===== ENTRADAS ===== -->
   <section id="entradas" class="menu-category">
     <div class="container">
-      <h2><i class="bi bi-egg-fried"></i> Entradas</h2>
+      <div class="category-header">
+        <div class="category-info">
+          <h2 class="category-title"><i class="bi bi-egg-fried"></i> Entradas</h2>
+          <p class="category-description">Perfectas para comenzar tu experiencia costeña</p>
+        </div>
+        <div class="category-stats">
+          <span class="stat">4 opciones</span>
+        </div>
+      </div>
+      
       <div class="menu-grid">
         <div class="menu-item" data-id="101">
-          <img src="img/patacones con camarones.jpg" alt="Patacones con Camarones">
-          <h3 class="item-title">Patacones con Camarones</h3>
-          <p>Patacones dorados con camarón salteado y aderezo de la casa.</p>
-          <div class="item-footer">
-            <span class="item-price">₡3,500</span>
-            <button class="btn btn-accent btn-small add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+          <div class="item-badge popular">Más Pedido</div>
+          <div class="item-image">
+            <img src="img/patacones con camarones.jpg" alt="Patacones con Camarones">
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h3 class="item-title">Patacones con Camarones</h3>
+              <span class="item-price">₡3,500</span>
+            </div>
+            <p class="item-description">Patacones dorados con camarón salteado y aderezo de la casa. Crujiente por fuera, suave por dentro.</p>
+            <div class="item-features">
+              <span class="feature"><i class="bi bi-clock"></i> 10-15 min</span>
+              <span class="feature"><i class="bi bi-people"></i> 2 personas</span>
+            </div>
+            <div class="item-actions">
+              <button class="btn btn-accent add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+              <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
           </div>
         </div>
+        
         <div class="menu-item" data-id="102">
-          <img src="img/empanadas.jpg" alt="Empanadas de Mariscos">
-          <h3 class="item-title">Empanadas de Mariscos </h3>
-          <p>Crocantes, rellenas de mariscos y queso.</p>
-          <div class="item-footer">
-            <span class="item-price">₡3,200</span>
-            <button class="btn btn-accent btn-small add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+          <div class="item-image">
+            <img src="img/empanadas.jpg" alt="Empanadas de Mariscos">
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h3 class="item-title">Empanadas de Mariscos</h3>
+              <span class="item-price">₡3,200</span>
+            </div>
+            <p class="item-description">Crocantes, rellenas de mariscos y queso. Ideal para compartir o disfrutar solo.</p>
+            <div class="item-features">
+              <span class="feature"><i class="bi bi-clock"></i> 8-12 min</span>
+              <span class="feature"><i class="bi bi-people"></i> 1-2 personas</span>
+            </div>
+            <div class="item-actions">
+              <button class="btn btn-accent add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+              <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
           </div>
         </div>
+        
         <div class="menu-item" data-id="103">
-          <img src="img/deditos de pescado.jpg" alt="Deditos de Pescado">
-          <h3 class="item-title">Deditos de Pescado</h3>
-          <p>Empanizados, con salsa tártara.</p>
-          <div class="item-footer">
-            <span class="item-price">₡3,000</span>
-            <button class="btn btn-accent btn-small add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+          <div class="item-image">
+            <img src="img/deditos de pescado.jpg" alt="Deditos de Pescado">
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h3 class="item-title">Deditos de Pescado</h3>
+              <span class="item-price">₡3,000</span>
+            </div>
+            <p class="item-description">Empanizados, con salsa tártara. Perfectos para los más pequeños y no tan pequeños.</p>
+            <div class="item-features">
+              <span class="feature"><i class="bi bi-clock"></i> 10 min</span>
+              <span class="feature"><i class="bi bi-people"></i> 2 personas</span>
+            </div>
+            <div class="item-actions">
+              <button class="btn btn-accent add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+              <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
           </div>
         </div>
+        
         <div class="menu-item" data-id="104">
-          <img src="img/vuelve a la vida.png" alt="Vuelve a la Vida">
-          <h3 class="item-title">Vuelve a la Vida</h3>
-          <p>Mariscos mixtos en cocktail cítrico.</p>
-          <div class="item-footer">
-            <span class="item-price">₡3,800</span>
-            <button class="btn btn-accent btn-small add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+          <div class="item-badge specialty">Especial</div>
+          <div class="item-image">
+            <img src="img/vuelve a la vida.png" alt="Vuelve a la Vida">
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h3 class="item-title">Vuelve a la Vida</h3>
+              <span class="item-price">₡3,800</span>
+            </div>
+            <p class="item-description">Mariscos mixtos en cocktail cítrico. Una explosión de sabores del mar.</p>
+            <div class="item-features">
+              <span class="feature"><i class="bi bi-clock"></i> 5 min</span>
+              <span class="feature"><i class="bi bi-people"></i> 1 persona</span>
+            </div>
+            <div class="item-actions">
+              <button class="btn btn-accent add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+              <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -116,33 +222,85 @@
   <!-- ===== CEVICHES ===== -->
   <section id="ceviches" class="menu-category featured">
     <div class="container">
-      <h2><i class="bi bi-droplet"></i> Ceviches</h2>
+      <div class="category-header">
+        <div class="category-info">
+          <h2 class="category-title"><i class="bi bi-droplet"></i> Ceviches</h2>
+          <p class="category-description">Frescura y sabor en cada bocado, preparados al momento</p>
+        </div>
+        <div class="category-stats">
+          <span class="stat">3 especialidades</span>
+        </div>
+      </div>
+      
       <div class="menu-grid">
-        <div class="menu-item" data-id="201">
-          <img src="img/ceviche.png" alt="Ceviche Clásico">
-          <h3 class="item-title">Ceviche Clásico</h3>
-          <p>Pescado fresco marinado con limón y culantro.</p>
-          <div class="item-footer">
-            <span class="item-price">₡3,500</span>
-            <button class="btn btn-accent btn-small add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+        <div class="menu-item featured" data-id="201">
+          <div class="item-badge popular">Favorito</div>
+          <div class="item-image">
+            <img src="img/ceviche.png" alt="Ceviche Clásico">
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h3 class="item-title">Ceviche Clásico</h3>
+              <span class="item-price">₡3,500</span>
+            </div>
+            <p class="item-description">Pescado fresco marinado con limón y culantro. La receta tradicional que nunca falla.</p>
+            <div class="item-features">
+              <span class="feature"><i class="bi bi-clock"></i> 15 min</span>
+              <span class="feature"><i class="bi bi-people"></i> 1 persona</span>
+            </div>
+            <div class="item-actions">
+              <button class="btn btn-accent add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+              <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
           </div>
         </div>
+        
         <div class="menu-item" data-id="203">
-          <img src="img/costeño.jpeg" alt="Ceviche Costeño Tradicional">
-          <h3 class="item-title">Ceviche Costeño Tradicional</h3>
-          <p>Con cebolla morada y notas de ají.</p>
-          <div class="item-footer">
-            <span class="item-price">₡3,600</span>
-            <button class="btn btn-accent btn-small add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+          <div class="item-image">
+            <img src="img/costeño.jpeg" alt="Ceviche Costeño Tradicional">
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h3 class="item-title">Ceviche Costeño Tradicional</h3>
+              <span class="item-price">₡3,600</span>
+            </div>
+            <p class="item-description">Con cebolla morada y notas de ají. Un toque picante que realza los sabores.</p>
+            <div class="item-features">
+              <span class="feature"><i class="bi bi-clock"></i> 15 min</span>
+              <span class="feature"><i class="bi bi-people"></i> 1 persona</span>
+            </div>
+            <div class="item-actions">
+              <button class="btn btn-accent add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+              <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
           </div>
         </div>
-        <div class="menu-item" data-id="204">
-          <img src="img/pulpo.jpg" alt="Ceviche de Pulpo">
-          <h3 class="item-title">Ceviche de Pulpo</h3>
-          <p>Pulpo tierno marinado al limón con ají.</p>
-          <div class="item-footer">
-            <span class="item-price">₡4,700</span>
-            <button class="btn btn-accent btn-small add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+        
+        <div class="menu-item premium" data-id="204">
+          <div class="item-badge specialty">Premium</div>
+          <div class="item-image">
+            <img src="img/pulpo.jpg" alt="Ceviche de Pulpo">
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h3 class="item-title">Ceviche de Pulpo</h3>
+              <span class="item-price">₡4,700</span>
+            </div>
+            <p class="item-description">Pulpo tierno marinado al limón con ají. Textura única y sabor inigualable.</p>
+            <div class="item-features">
+              <span class="feature"><i class="bi bi-clock"></i> 20 min</span>
+              <span class="feature"><i class="bi bi-people"></i> 1 persona</span>
+            </div>
+            <div class="item-actions">
+              <button class="btn btn-accent add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+              <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -152,51 +310,131 @@
   <!-- ===== PLATOS FUERTES ===== -->
   <section id="platos-fuertes" class="menu-category">
     <div class="container">
-      <h2><i class="bi bi-fire"></i> Platos Fuertes</h2>
+      <div class="category-header">
+        <div class="category-info">
+          <h2 class="category-title"><i class="bi bi-fire"></i> Platos Fuertes</h2>
+          <p class="category-description">Nuestras especialidades que conquistan paladares</p>
+        </div>
+        <div class="category-stats">
+          <span class="stat">5 opciones</span>
+        </div>
+      </div>
+      
       <div class="menu-grid">
         <div class="menu-item" data-id="301">
-          <img src="img/pescado.jpg" alt="Pescado Frito Entero">
-          <h3 class="item-title">Pescado Frito Entero</h3>
-          <p>Exterior crocante, interior jugoso. Con patacones y ensalada.</p>
-          <div class="item-footer">
-            <span class="item-price">₡6,500</span>
-            <button class="btn btn-accent btn-small add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+          <div class="item-image">
+            <img src="img/pescado.jpg" alt="Pescado Frito Entero">
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h3 class="item-title">Pescado Frito Entero</h3>
+              <span class="item-price">₡6,500</span>
+            </div>
+            <p class="item-description">Exterior crocante, interior jugoso. Con patacones y ensalada fresca.</p>
+            <div class="item-features">
+              <span class="feature"><i class="bi bi-clock"></i> 20-25 min</span>
+              <span class="feature"><i class="bi bi-people"></i> 2 personas</span>
+            </div>
+            <div class="item-actions">
+              <button class="btn btn-accent add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+              <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
           </div>
         </div>
+        
         <div class="menu-item" data-id="302">
-          <img src="img/camarones.jpg" alt="Camarones al Ajillo">
-          <h3 class="item-title">Camarones al Ajillo</h3>
-          <p>Salteados en mantequilla, ajo y perejil.</p>
-          <div class="item-footer">
-            <span class="item-price">₡6,900</span>
-            <button class="btn btn-accent btn-small add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+          <div class="item-badge popular">Recomendado</div>
+          <div class="item-image">
+            <img src="img/camarones.jpg" alt="Camarones al Ajillo">
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h3 class="item-title">Camarones al Ajillo</h3>
+              <span class="item-price">₡6,900</span>
+            </div>
+            <p class="item-description">Salteados en mantequilla, ajo y perejil. Acompañados con arroz y vegetales.</p>
+            <div class="item-features">
+              <span class="feature"><i class="bi bi-clock"></i> 15-20 min</span>
+              <span class="feature"><i class="bi bi-people"></i> 2 personas</span>
+            </div>
+            <div class="item-actions">
+              <button class="btn btn-accent add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+              <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
           </div>
         </div>
+        
         <div class="menu-item" data-id="303">
-          <img src="img/cazuela de mariscos.jpg" alt="Cazuela de Mariscos">
-          <h3 class="item-title">Cazuela de Mariscos</h3>
-          <p>Caldo sabroso con mezcla de mariscos y especias.</p>
-          <div class="item-footer">
-            <span class="item-price">₡7,200</span>
-            <button class="btn btn-accent btn-small add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+          <div class="item-image">
+            <img src="img/cazuela de mariscos.jpg" alt="Cazuela de Mariscos">
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h3 class="item-title">Cazuela de Mariscos</h3>
+              <span class="item-price">₡7,200</span>
+            </div>
+            <p class="item-description">Caldo sabroso con mezcla de mariscos y especias. Ideal para días frescos.</p>
+            <div class="item-features">
+              <span class="feature"><i class="bi bi-clock"></i> 25 min</span>
+              <span class="feature"><i class="bi bi-people"></i> 2 personas</span>
+            </div>
+            <div class="item-actions">
+              <button class="btn btn-accent add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+              <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
           </div>
         </div>
-        <div class="menu-item" data-id="304">
-          <img src="img/parrillada mariscos.jpg" alt="Parrillada de Mariscos">
-          <h3 class="item-title">Parrillada de Mariscos</h3>
-          <p>Selección de mar a la parrilla (para compartir).</p>
-          <div class="item-footer">
-            <span class="item-price">₡9,500</span>
-            <button class="btn btn-accent btn-small add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+        
+        <div class="menu-item premium" data-id="304">
+          <div class="item-badge specialty">Para Compartir</div>
+          <div class="item-image">
+            <img src="img/parrillada mariscos.jpg" alt="Parrillada de Mariscos">
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h3 class="item-title">Parrillada de Mariscos</h3>
+              <span class="item-price">₡9,500</span>
+            </div>
+            <p class="item-description">Selección de mar a la parrilla (para compartir). Incluye camarones, calamares, pescado y más.</p>
+            <div class="item-features">
+              <span class="feature"><i class="bi bi-clock"></i> 30 min</span>
+              <span class="feature"><i class="bi bi-people"></i> 3-4 personas</span>
+            </div>
+            <div class="item-actions">
+              <button class="btn btn-accent add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+              <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
           </div>
         </div>
+        
         <div class="menu-item" data-id="305">
-          <img src="img/mejillones.jpg" alt="Mejillones al Vino">
-          <h3 class="item-title">Mejillones al Vino</h3>
-          <p>Reducción de vino blanco, ajo y finas hierbas.</p>
-          <div class="item-footer">
-            <span class="item-price">₡6,800</span>
-            <button class="btn btn-accent btn-small add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+          <div class="item-image">
+            <img src="img/mejillones.jpg" alt="Mejillones al Vino">
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h3 class="item-title">Mejillones al Vino</h3>
+              <span class="item-price">₡6,800</span>
+            </div>
+            <p class="item-description">Reducción de vino blanco, ajo y finas hierbas. Acompañados con pan artesanal.</p>
+            <div class="item-features">
+              <span class="feature"><i class="bi bi-clock"></i> 18 min</span>
+              <span class="feature"><i class="bi bi-people"></i> 2 personas</span>
+            </div>
+            <div class="item-actions">
+              <button class="btn btn-accent add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+              <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -206,33 +444,84 @@
   <!-- ===== BEBIDAS ===== -->
   <section id="bebidas" class="menu-category">
     <div class="container">
-      <h2><i class="bi bi-cup-straw"></i> Bebidas</h2>
+      <div class="category-header">
+        <div class="category-info">
+          <h2 class="category-title"><i class="bi bi-cup-straw"></i> Bebidas</h2>
+          <p class="category-description">Refrescantes acompañamientos para tu comida</p>
+        </div>
+        <div class="category-stats">
+          <span class="stat">3 opciones</span>
+        </div>
+      </div>
+      
       <div class="menu-grid">
         <div class="menu-item" data-id="401">
-          <img src="img/frescos naturales.jpg" alt="Frescos Naturales">
-          <h3 class="item-title">Frescos Naturales</h3>
-          <p>Sabores del día (consulta opciones).</p>
-          <div class="item-footer">
-            <span class="item-price">₡1,400</span>
-            <button class="btn btn-accent btn-small add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+          <div class="item-image">
+            <img src="img/frescos naturales.jpg" alt="Frescos Naturales">
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h3 class="item-title">Frescos Naturales</h3>
+              <span class="item-price">₡1,400</span>
+            </div>
+            <p class="item-description">Sabores del día (consulta opciones). Preparados con frutas frescas de temporada.</p>
+            <div class="item-features">
+              <span class="feature"><i class="bi bi-cup-straw"></i> 500ml</span>
+              <span class="feature"><i class="bi bi-arrow-repeat"></i> Recargable</span>
+            </div>
+            <div class="item-actions">
+              <button class="btn btn-accent add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+              <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
           </div>
         </div>
+        
         <div class="menu-item" data-id="402">
-          <img src="img/gaseosas.jpg" alt="Gaseosas">
-          <h3 class="item-title">Gaseosas</h3>
-          <p>Diversas marcas y sabores.</p>
-          <div class="item-footer">
-            <span class="item-price">₡1,000</span>
-            <button class="btn btn-accent btn-small add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+          <div class="item-image">
+            <img src="img/gaseosas.jpg" alt="Gaseosas">
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h3 class="item-title">Gaseosas</h3>
+              <span class="item-price">₡1,000</span>
+            </div>
+            <p class="item-description">Diversas marcas y sabores. Coca-Cola, Fanta, Sprite y más.</p>
+            <div class="item-features">
+              <span class="feature"><i class="bi bi-cup-straw"></i> 500ml</span>
+              <span class="feature"><i class="bi bi-snow"></i> Bien fría</span>
+            </div>
+            <div class="item-actions">
+              <button class="btn btn-accent add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+              <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
           </div>
         </div>
+        
         <div class="menu-item" data-id="403">
-          <img src="img/tropicales.jpg" alt="Bebidas Tropicales">
-          <h3 class="item-title">Bebidas Tropicales</h3>
-          <p>Combinaciones frutales bien frías.</p>
-          <div class="item-footer">
-            <span class="item-price">₡1,600</span>
-            <button class="btn btn-accent btn-small add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+          <div class="item-badge popular">Refrescante</div>
+          <div class="item-image">
+            <img src="img/tropicales.jpg" alt="Bebidas Tropicales">
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h3 class="item-title">Bebidas Tropicales</h3>
+              <span class="item-price">₡1,600</span>
+            </div>
+            <p class="item-description">Combinaciones frutales bien frías. Piña colada, maracuyá, guanábana y más.</p>
+            <div class="item-features">
+              <span class="feature"><i class="bi bi-cup-straw"></i> 500ml</span>
+              <span class="feature"><i class="bi bi-tropical-storm"></i> Tropical</span>
+            </div>
+            <div class="item-actions">
+              <button class="btn btn-accent add-to-cart"><i class="bi bi-cart-plus"></i> Agregar</button>
+              <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -242,28 +531,66 @@
   <!-- ===== PROMOCIONES ===== -->
   <section id="promociones" class="menu-category">
     <div class="container">
-      <h2><i class="bi bi-percent"></i> Promociones</h2>
+      <div class="category-header">
+        <div class="category-info">
+          <h2 class="category-title"><i class="bi bi-percent"></i> Promociones</h2>
+          <p class="category-description">Ofertas especiales para que disfrutes más por menos</p>
+        </div>
+        <div class="category-stats">
+          <span class="stat">2 promociones</span>
+        </div>
+      </div>
+      
       <div class="menu-grid">
-        <div class="menu-item" data-id="501">
-          <img src="img/promos.png" alt="Promos de la Casa">
-          <h3 class="item-title">Promos de la Casa</h3>
-          <p>Consulta combos y descuentos vigentes.</p>
-          <div class="item-footer">
-            <span class="item-price">₡2500</span>
-            <button class="btn btn-accent btn-small add-to-cart" disabled title="Selecciona por WhatsApp">
-              <i class="bi bi-cart-plus"></i> Agregar
-            </button>
+        <div class="menu-item promo-item" data-id="501">
+          <div class="item-badge specialty">Oferta</div>
+          <div class="item-image">
+            <img src="img/promos.png" alt="Promos de la Casa">
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h3 class="item-title">Promos de la Casa</h3>
+              <span class="item-price">₡2,500</span>
+            </div>
+            <p class="item-description">Consulta combos y descuentos vigentes. Perfectos para compartir en familia.</p>
+            <div class="item-features">
+              <span class="feature"><i class="bi bi-star"></i> Incluye bebida</span>
+              <span class="feature"><i class="bi bi-people"></i> 2+ personas</span>
+            </div>
+            <div class="item-actions">
+              <button class="btn btn-accent add-to-cart" disabled title="Selecciona por WhatsApp">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+              <a href="https://wa.me/50663199969?text=¡Hola!%20Quiero%20consultar%20las%20promociones%20de%20la%20casa" class="btn btn-secondary" target="_blank">
+                <i class="bi bi-whatsapp"></i> Consultar
+              </a>
+            </div>
           </div>
         </div>
-        <div class="menu-item" data-id="502">
-          <img src="img/menu.jpg" alt="Menú del Día">
-          <h3 class="item-title">Menú del Día</h3>
-          <p>Pregunta por la opción destacada hoy.</p>
-          <div class="item-footer">
-            <span class="item-price">₡3500</span>
-            <a class="btn btn-secondary btn-small" href="https://wa.me/50663199969" target="_blank">
-              <i class="bi bi-whatsapp"></i> Consultar
-            </a>
+        
+        <div class="menu-item promo-item" data-id="502">
+          <div class="item-badge popular">Del Día</div>
+          <div class="item-image">
+            <img src="img/menu.jpg" alt="Menú del Día">
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h3 class="item-title">Menú del Día</h3>
+              <span class="item-price">₡3,500</span>
+            </div>
+            <p class="item-description">Pregunta por la opción destacada hoy. Siempre fresco, siempre delicioso.</p>
+            <div class="item-features">
+              <span class="feature"><i class="bi bi-clock"></i> Solo hoy</span>
+              <span class="feature"><i class="bi bi-arrow-through-heart"></i> Especial</span>
+            </div>
+            <div class="item-actions">
+              <a class="btn btn-accent" href="https://wa.me/50663199969?text=¡Hola!%20Quiero%20saber%20cuál%20es%20el%20menú%20del%20día" target="_blank">
+                <i class="bi bi-whatsapp"></i> Consultar
+              </a>
+              <button class="btn-outline favorite-btn" title="Agregar a favoritos">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -287,96 +614,97 @@
     </div>
   </aside>
 
-<footer class="footer">
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
     <div class="container">
-        <div class="footer-content">
-            <!-- Información Principal -->
-            <div class="footer-section">
-                <div class="footer-logo">
-                    <img src="img/logo.jpg" alt="Cevichería El Pueblo" class="footer-logo-img">
-                    <span class="footer-logo-text">Cevichería El Pueblo</span>
-                </div>
-                <p class="footer-description">
-                    Auténtico sabor costeño con tradición familiar. Servimos felicidad en cada plato desde 2015.
-                </p>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/profile.php?id=61558024648078" class="social-link" target="_blank">
-                        <i class="bi bi-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/cevichera_del_pueblo/" class="social-link" target="_blank">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                    <a href="https://wa.me/50663199969" class="social-link" target="_blank">
-                        <i class="bi bi-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Horarios -->
-            <div class="footer-section">
-                <h4>Horarios de Atención</h4>
-                <div class="schedule-info">
-                    <div class="schedule-item">
-                        <span class="days">Lunes, Miércoles, Viernes:</span>
-                        <span class="hours">4:00 PM - 10:00 PM</span>
-                    </div>
-                    <div class="schedule-item">
-                        <span class="days">Martes:</span>
-                        <span class="hours closed">Cerrado</span>
-                    </div>
-                    <div class="schedule-item">
-                        <span class="days">Sábado y Domingo:</span>
-                        <span class="hours">12:00 MD - 11:00 PM</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Contacto -->
-            <div class="footer-section">
-                <h4>Contacto</h4>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="bi bi-telephone"></i>
-                        <div class="contact-details">
-                            <span class="contact-label">Teléfono</span>
-                            <span class="contact-value">+506 6319-9969</span>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="bi bi-geo-alt"></i>
-                        <div class="contact-details">
-                            <span class="contact-label">Ubicación</span>
-                            <span class="contact-value">San Juan de Santa Bárbara, Heredia</span>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="bi bi-envelope"></i>
-                        <div class="contact-details">
-                            <span class="contact-label">Email</span>
-                            <span class="contact-value">cevicheriadelpueblo@gmail.com</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Enlaces Rápidos -->
-            <div class="footer-section">
-                <h4>Enlaces Rápidos</h4>
-                <div class="footer-links">
-                    <a href="#inicio" class="footer-link">Inicio</a>
-                    <a href="menu.html" class="footer-link">Menú Completo</a>
-                    <a href="#especialidades" class="footer-link">Especialidades</a>
-                    <a href="contacto.html" class="footer-link">Contacto</a>
-                    <a href="#promociones" class="footer-link">Promociones</a>
-                </div>
-            </div>
+      <div class="footer-content">
+        <!-- Información Principal -->
+        <div class="footer-section">
+          <div class="footer-logo">
+            <img src="img/logo.jpg" alt="Cevichería El Pueblo" class="footer-logo-img">
+            <span class="footer-logo-text">Cevichería El Pueblo</span>
+          </div>
+          <p class="footer-description">
+            Auténtico sabor costeño con tradición familiar. Servimos felicidad en cada plato desde 2015.
+          </p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61558024648078" class="social-link" target="_blank">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/cevichera_del_pueblo/" class="social-link" target="_blank">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://wa.me/50663199969" class="social-link" target="_blank">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+          </div>
         </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2024 Cevichería El Pueblo. Todos los derechos reservados.</p>
+
+        <!-- Horarios -->
+        <div class="footer-section">
+          <h4>Horarios de Atención</h4>
+          <div class="schedule-info">
+            <div class="schedule-item">
+              <span class="days">Lunes, Miércoles, Viernes:</span>
+              <span class="hours">4:00 PM - 10:00 PM</span>
+            </div>
+            <div class="schedule-item">
+              <span class="days">Martes:</span>
+              <span class="hours closed">Cerrado</span>
+            </div>
+            <div class="schedule-item">
+              <span class="days">Sábado y Domingo:</span>
+              <span class="hours">12:00 MD - 11:00 PM</span>
+            </div>
+          </div>
         </div>
+
+        <!-- Contacto -->
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="bi bi-telephone"></i>
+              <div class="contact-details">
+                <span class="contact-label">Teléfono</span>
+                <span class="contact-value">+506 6319-9969</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="bi bi-geo-alt"></i>
+              <div class="contact-details">
+                <span class="contact-label">Ubicación</span>
+                <span class="contact-value">San Juan de Santa Bárbara, Heredia</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="bi bi-envelope"></i>
+              <div class="contact-details">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">cevicheriadelpueblo@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enlaces Rápidos -->
+        <div class="footer-section">
+          <h4>Enlaces Rápidos</h4>
+          <div class="footer-links">
+            <a href="#inicio" class="footer-link">Inicio</a>
+            <a href="menu.html" class="footer-link">Menú Completo</a>
+            <a href="#especialidades" class="footer-link">Especialidades</a>
+            <a href="contacto.html" class="footer-link">Contacto</a>
+            <a href="#promociones" class="footer-link">Promociones</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Cevichería El Pueblo. Todos los derechos reservados.</p>
+      </div>
     </div>
-</footer>
+  </footer>
 
   <!-- JS (solo carrito) -->
   <script src="js/menu.js"></script>
