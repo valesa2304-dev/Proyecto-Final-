@@ -2038,3 +2038,43 @@ h1, h2, h3, h4, h5 {
     border: 0;
     display: block;
 }
+.gallery-filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.gallery-filter-bar label {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.gallery-filter-bar select {
+    border-radius: 0.8rem;
+    border: 1px solid #e5e7eb;
+    padding: 0.5rem 0.8rem;
+    font-family: "Poppins", system-ui, sans-serif;
+    font-size: 0.9rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-grid .card {
+    border-radius: 1.2rem;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 14px 35px rgba(15,23,42,0.08);
+    background: #fff;
+}
+
+.gallery-grid .card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
