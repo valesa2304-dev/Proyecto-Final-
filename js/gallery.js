@@ -1,58 +1,77 @@
+// js/gallery.js
+$(document).ready(async function () {
+    const $galleryGrid = $('#galleryGrid');
+    const $galleryFilter = $('#galleryFilter');
 
-$(document).ready(async function() {
-    const galleryGrid = $('#galleryGrid');
-    
-    if (galleryGrid.length === 0) return;
+    // Si la página no tiene grid, no hacemos nada
+    if ($galleryGrid.length === 0) return;
+
+    let galleryItems = [];
 
     try {
-      
+        // Cargar el JSON de la carpeta /json
         const response = await fetch('./json/galeria.json');
         if (!response.ok) throw new Error('Error cargando galería');
-        
-        const galleryItems = await response.json();
+
+        galleryItems = await response.json();
+
+        // Mostrar todo al inicio
         renderGallery(galleryItems);
 
-       
-        $('#galleryFilter').on('change', function() {
+        // Filtro por categoría
+        $galleryFilter.on('change', function () {
             const category = $(this).val();
-            if (category === 'all') {
+
+            if (category === 'todos') {
                 renderGallery(galleryItems);
             } else {
-                const filtered = galleryItems.filter(item => item.category === category);
+                const filtered = galleryItems.filter(
+                    item => item.category === category
+                );
                 renderGallery(filtered);
             }
         });
-
     } catch (error) {
         console.error('Error:', error);
-        galleryGrid.html('<div class="col-12 text-center"><p>Error cargando la galería</p></div>');
+        $galleryGrid.html(
+            '<div class="col-12 text-center text-muted">No se pudo cargar la galería.</div>'
+        );
     }
 
+    // ===== DIBUJAR LAS TARJETAS =====
     function renderGallery(items) {
-        galleryGrid.empty();
-        
+        $galleryGrid.empty();
+
+        if (!items || items.length === 0) {
+            $galleryGrid.html(
+                '<div class="col-12 text-center text-muted">No hay elementos para mostrar.</div>'
+            );
+            return;
+        }
+
         items.forEach(item => {
-            const col = $('<div>').addClass('col-md-4 col-sm-6 mb-4');
-            const card = $('<div>').addClass('card h-100 shadow-sm');
-            const img = $('<img>').addClass('card-img-top gallery-img')
+            const $col = $('<div>').addClass('gallery-item-col');
+
+            const $card = $('<div>').addClass('card gallery-card');
+
+            const $img = $('<img>')
+                .addClass('card-img-top gallery-img')
                 .attr({
                     src: item.image,
-                    alt: item.alt || item.title,
+                    alt: item.alt || item.title || 'Imagen de galería',
                     loading: 'lazy'
-                })
-                .css({
-                    'height': '250px',
-                    'object-fit': 'cover'
                 });
-            
-            const cardBody = $('<div>').addClass('card-body');
-            const title = $('<h5>').addClass('card-title').text(item.title);
-            const desc = $('<p>').addClass('card-text text-muted small').text(item.description || '');
 
-            cardBody.append(title, desc);
-            card.append(img, cardBody);
-            col.append(card);
-            galleryGrid.append(col);
+            const $body = $('<div>').addClass('card-body');
+            const $title = $('<h5>').addClass('card-title').text(item.title);
+            const $desc = $('<p>')
+                .addClass('card-text text-muted small')
+                .text(item.description || '');
+
+            $body.append($title, $desc);
+            $card.append($img, $body);
+            $col.append($card);
+            $galleryGrid.append($col);
         });
     }
 });

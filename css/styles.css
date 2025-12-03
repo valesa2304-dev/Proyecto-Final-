@@ -2078,3 +2078,115 @@ h1, h2, h3, h4, h5 {
     height: 220px;
     object-fit: cover;
 }
+
+/* ===== Ajustes sutiles del Home (index) ===== */
+/* Mantiene la paleta original, solo refina detalles visuales */
+
+/* Imágenes de los platos: tamaño consistente y recorte elegante */
+.menu-grid .menu-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Tarjetas de menú con un poquito más de presencia */
+.menu-item {
+    box-shadow: var(--shadow-lg);
+}
+
+/* Imagen principal del hero con marco más “premium” */
+.hero-image .featured-dish {
+    border-radius: 24px;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+
+#especialidades-dinamicas .menu-item {
+    background: var(--white);
+}
+
+/* Testimonios con un pelín más de profundidad (sin cambiar colores) */
+.testimonial-card {
+    box-shadow: var(--shadow-lg);
+}
+
+/* Pasos del proceso con borde más suave, sin cambiar el fondo */
+.process-step {
+    box-shadow: var(--shadow);
+    border-radius: 18px;
+}
+
+/* Grid igual al menú, pero más centrado */
+.recomendados-grid {
+    gap: 2.5rem;
+}
+
+/* Tarjeta generada por home.js */
+.recomendados-grid .menu-item {
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+/* Hover elegante */
+.recomendados-grid .menu-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px rgba(0,0,0,0.15);
+}
+
+/* Imágenes con bordes redondeados superiores */
+.recomendados-grid .menu-item img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* Contenido interno */
+.recomendados-grid .menu-content {
+    padding: 1.5rem;
+}
+
+/* Precio separado del tag */
+.recomendados-grid .menu-price {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+
+.recomendados-grid .menu-badge {
+    background: var(--accent);
+    color: var(--white);
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 999px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+/* Título */
+.recomendados-grid h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.35rem;
+}
+
+/* Descripción */
+.recomendados-grid p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.45;
+    margin-bottom: 0.85rem;
+}
+
+/* Centrado más fino en pantallas grandes */
+#especialidades-dinamicas .container {
+    max-width: 1150px;
+}

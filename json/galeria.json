@@ -31,14 +31,14 @@
         "image": "/img/presbere.png",
         "alt": "Caldosa tradicional",
         "title": "Caldosa Tradicional",
-        "description": "Sopa reconfortante",
+        "description": "Ceviche reconfortante",
         "category": "platos"
     },
     {
-        "image": "/img/menu.jpg",
-        "alt": "Limonada natural",
+        "image": "/img/frescos naturales.jpg",
+        "alt": "Frescos naturales",
         "title": "Bebidas Refrescantes",
-        "description": "Limonada natural preparada",
+        "description": "Distintos sabores frescos",
         "category": "bebidas"
     }
 ]
