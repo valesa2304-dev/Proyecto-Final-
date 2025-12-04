@@ -2190,3 +2190,252 @@ h1, h2, h3, h4, h5 {
 #especialidades-dinamicas .container {
     max-width: 1150px;
 }
+/* ===== SECCIÓN MULTIMEDIA (VIDEOS HOME) ===== */
+.media-section {
+    background: #f8fafc;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.media-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.media-card h3 {
+    font-size: 1.4rem;
+    color: var(--primary);
+}
+
+.media-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.media-video {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.media-video video {
+    width: 100%;
+    display: block;
+    outline: none;
+}
+/* =====================================
+   ESTILOS PROFESIONALES PARA AUTOR
+   ===================================== */
+
+/* HERO ESPECIAL PARA AUTOR */
+.autor-hero {
+    padding: 160px 0 100px;
+    background: linear-gradient(135deg, rgba(26, 83, 92, 0.9), rgba(42, 122, 122, 0.85));
+}
+
+.autor-hero .hero-text {
+    max-width: 550px;
+}
+
+/* Imagen profesional con marco sutil */
+.autor-hero .profile-image {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
+    border: 3px solid rgba(255,255,255,0.45);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease;
+}
+
+.autor-hero .profile-image:hover {
+    transform: translateY(-6px);
+}
+
+/* Badge profesional */
+.autor-hero .floating-badge {
+    background: var(--secondary);
+    color: var(--dark);
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 8px 16px;
+}
+
+/* =====================================
+   ROL EN EL PROYECTO
+   ===================================== */
+
+.project-role-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.role-item {
+    background: white;
+    border-radius: 18px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.role-item:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.role-item i {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.role-item h3 {
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+}
+
+/* =====================================
+   HABILIDADES PROFESIONALES MODERNAS
+   ===================================== */
+
+.skills-section {
+    background: #f7fafb;
+    padding: 90px 0;
+}
+
+.skills-grid {
+    margin-top: 3rem;
+}
+
+.skill-category {
+    border: none;
+    background: linear-gradient(135deg, #ffffff, #f6f9f9);
+    box-shadow: var(--shadow);
+}
+
+.skill-category h3 {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.skill-tag {
+    padding: 0.55rem 1.1rem;
+    border-radius: 25px;
+    background: var(--primary);
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+    background: var(--accent);
+    transform: translateY(-3px);
+}
+
+
+.about-section {
+    background: #ffffff;
+    padding: 100px 0;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 3rem;
+}
+
+.about-content .about-text h3 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+.about-content .about-text .title {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.about-content p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+}
+
+.about-content .profile-image {
+    max-width: 330px;
+    border-radius: 18px;
+}
+
+/* Valores */
+.about-values {
+    margin-top: 2rem;
+}
+
+.value-item {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 1rem 1.2rem;
+}
+
+.value-item i {
+    background: var(--light);
+    color: var(--accent);
+}
+
+
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-buttons a {
+    font-size: 1rem;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .autor-hero {
+        text-align: center;
+        padding: 140px 0 60px;
+    }
+
+    .autor-hero .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .profile-image {
+        margin: 0 auto;
+    }
+
+    .project-role-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .value-item {
+        flex-direction: column;
+        align-items: center;
+    }
+}

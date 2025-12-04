@@ -53,14 +53,27 @@
             </div>
 
             <div class="contact-content">
-                <!-- ===== FORMULARIO (REQUISITOS DEL PDF) ===== -->
+                <!-- ===== FORMULARIO ===== -->
                 <div class="contact-form-container">
                     <div class="form-header">
                         <h3>Escríbenos</h3>
                         <p>Todos los campos marcados con * son obligatorios.</p>
                     </div>
 
-                    <form class="contact-form" id="contactForm">
+                    <!-- Formulario que envía a FormSubmit -->
+                    <form
+                        class="contact-form"
+                        id="contactForm"
+                        method="POST"
+                        action="https://formsubmit.co/cevicheriadelpueblo@gmail.com"
+                        onsubmit="return calcularEdad()">
+
+                        <!-- Configuración FormSubmit -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="Nuevo mensaje desde el formulario de contacto">
+                        <!-- Redirige a la página de gracias en tu GitHub Pages -->
+                        <input type="hidden" name="_next" value="https://valesa2304-dev.github.io/Proyecto-Final-/gracias.html">
+
                         <!-- Nombre + Correo -->
                         <div class="form-row">
                             <div class="form-group">
@@ -85,7 +98,7 @@
                             </div>
                         </div>
 
-                        <!-- Edad (oculta) -->
+                        <!-- Edad oculta (la calcula sendEmail.js) -->
                         <input type="hidden" id="edad" name="edad">
 
                         <!-- Rango ingreso + Género -->
@@ -151,7 +164,6 @@
 
                 <!-- ===== INFO LATERAL ===== -->
                 <div class="contact-info-sidebar">
-                    <!-- Teléfonos -->
                     <div class="contact-card">
                         <div class="contact-card-header">
                             <i class="bi bi-telephone"></i>
@@ -168,7 +180,6 @@
                         </div>
                     </div>
 
-                    <!-- WhatsApp -->
                     <div class="contact-card">
                         <div class="contact-card-header">
                             <i class="bi bi-whatsapp"></i>
@@ -180,7 +191,6 @@
                         </a>
                     </div>
 
-                    <!-- Horarios -->
                     <div class="contact-card">
                         <div class="contact-card-header">
                             <i class="bi bi-clock"></i>
@@ -195,12 +205,11 @@
         </div>
     </section>
 
-    <!-- ===== UBICACIÓN (DENTRO DE CONTACTO) ===== -->
+    <!-- ===== UBICACIÓN ===== -->
     <section class="section" id="ubicacion">
         <div class="container">
             <div class="section-header">
                 <h2>¿Dónde estamos?</h2>
-                <p>Encuéntranos en San Juan de Santa Bárbara, Heredia.</p>
             </div>
 
             <div class="map-container">
@@ -217,6 +226,12 @@
                     <i class="bi bi-map"></i>Abrir en Google Maps
                 </a>
             </div>
+
+            <div class="text-center" style="margin-top: 1rem;">
+                <button id="btnRuta" class="btn btn-primary">
+                    <i class="bi bi-geo-alt"></i> Trazar ruta desde mi ubicación
+                </button>
+            </div>
         </div>
     </section>
 
@@ -224,7 +239,6 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <!-- Información Principal -->
                 <div class="footer-section">
                     <div class="footer-logo">
                         <img src="img/logo.jpg" alt="Cevichería El Pueblo" class="footer-logo-img">
@@ -246,7 +260,6 @@
                     </div>
                 </div>
 
-                <!-- Horarios -->
                 <div class="footer-section">
                     <h4>Horarios de Atención</h4>
                     <div class="schedule-info">
@@ -265,7 +278,6 @@
                     </div>
                 </div>
 
-                <!-- Contacto -->
                 <div class="footer-section">
                     <h4>Contacto</h4>
                     <div class="contact-info">
@@ -293,7 +305,6 @@
                     </div>
                 </div>
 
-                <!-- Enlaces Rápidos -->
                 <div class="footer-section">
                     <h4>Enlaces Rápidos</h4>
                     <div class="footer-links">
@@ -301,7 +312,6 @@
                         <a href="menu.html" class="footer-link">Menú Completo</a>
                         <a href="index.html#especialidades" class="footer-link">Especialidades</a>
                         <a href="contacto.html" class="footer-link">Contacto</a>
-                        <a href="#promociones" class="footer-link">Promociones</a>
                     </div>
                 </div>
             </div>
@@ -311,94 +321,51 @@
             </div>
         </div>
     </footer>
- <!-- Botón flotante de WhatsApp -->
-  <a href="https://wa.me/50663199969?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20de%20Cevicher%C3%ADa%20El%20Pueblo."
-     class="whatsapp-fab"
-     target="_blank"
-     aria-label="Escribir a Cevichería El Pueblo por WhatsApp">
-      <i class="bi bi-whatsapp"></i>
-  </a>
-    <!-- ===== JAVASCRIPT ===== -->
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/50663199969?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20de%20Cevicher%C3%ADa%20El%20Pueblo."
+       class="whatsapp-fab"
+       target="_blank"
+       aria-label="Escribir a Cevichería El Pueblo por WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- ===== SCRIPTS ===== -->
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Lógica de envío / validaciones -->
+    <script src="js/sendEmail.js"></script>
+    <script src="js/validaciones.js"></script>
+
+    <!-- JS de mapa y header -->
     <script>
-        // Calcular edad al cambiar la fecha
-        document.getElementById('fecha').addEventListener('change', function () {
-            const nacimiento = new Date(this.value);
-            const hoy = new Date();
-            let edad = hoy.getFullYear() - nacimiento.getFullYear();
-            const mes = hoy.getMonth() - nacimiento.getMonth();
-
-            if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
-                edad--;
-            }
-
-            document.getElementById('edad').value = edad;
-        });
-
-        // Envío del formulario por correo (mailto)
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const nombre   = document.getElementById('nombre').value.trim();
-            const email    = document.getElementById('email').value.trim();
-            const telefono = document.getElementById('telefono').value.trim();
-            const fecha    = document.getElementById('fecha').value;
-            const edad     = document.getElementById('edad').value;
-            const ingreso  = document.getElementById('ingreso').value;
-            const generoEl = document.querySelector('input[name="genero"]:checked');
-            const genero   = generoEl ? generoEl.value : '';
-
-            const gradosSeleccionados = Array.from(document.getElementById('grado').selectedOptions)
-                .map(opt => opt.value)
-                .join(', ');
-
-            const asunto   = document.getElementById('asunto').value;
-            const mensaje  = document.getElementById('mensaje').value.trim();
-
-            const cuerpo = `
-Nombre: ${nombre}
-Correo: ${email}
-Teléfono: ${telefono}
-Fecha de nacimiento: ${fecha}
-Edad: ${edad}
-Ingreso mensual: ${ingreso}
-Género: ${genero}
-Grado académico: ${gradosSeleccionados}
-
-Asunto: ${asunto}
-
-Mensaje:
-${mensaje}
-            `;
-
-            const mailto = `mailto:cevicheriadelpueblo@gmail.com?subject=${encodeURIComponent('Contacto Web - ' + asunto)}&body=${encodeURIComponent(cuerpo)}`;
-            window.location.href = mailto;
-        });
-
-        // Navegación suave para enlaces internos (#)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+        // Trazar ruta en Google Maps desde ubicación del usuario
+        const btnRuta = document.getElementById('btnRuta');
+        if (btnRuta) {
+            btnRuta.addEventListener('click', function () {
+                if (!navigator.geolocation) {
+                    alert("Tu navegador no soporta geolocalización.");
+                    return;
                 }
+                navigator.geolocation.getCurrentPosition(function (pos) {
+                    const lat = pos.coords.latitude;
+                    const lng = pos.coords.longitude;
+                    const origin = encodeURIComponent(lat + "," + lng);
+                    const destination = encodeURIComponent("Cevichería El Pueblo San Juan de Santa Bárbara Heredia");
+                    const url = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&travelmode=driving`;
+                    window.open(url, '_blank');
+                }, function () {
+                    alert("No se pudo obtener tu ubicación.");
+                });
             });
-        });
+        }
 
-        // Header fijo al hacer scroll
+        // Header fijo
         window.addEventListener('scroll', function() {
             const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
+            header.classList.toggle('scrolled', window.scrollY > 100);
         });
     </script>
 </body>
 </html>
-
-
