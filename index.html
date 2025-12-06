@@ -20,6 +20,9 @@
 
 <body>
 
+    <!-- Audio de bienvenida -->
+    <audio id="audio-welcome" src="mp3/bienvenida al cliente.mp3" preload="auto"></audio>
+
 <header class="header" id="header">
     <div class="container">
         <div class="nav-container">
@@ -387,6 +390,26 @@
         if (window.scrollY > 100) header.classList.add("scrolled");
         else header.classList.remove("scrolled");
     });
+</script>
+
+<!-- Script de audio de bienvenida -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("audio-welcome");
+    if (!audio) return;
+
+    audio.volume = 0.8;
+
+    audio.play().catch(() => {
+        const start = () => {
+            audio.play();
+            document.removeEventListener("click", start);
+            document.removeEventListener("touchstart", start);
+        };
+        document.addEventListener("click", start);
+        document.addEventListener("touchstart", start);
+    });
+});
 </script>
 
 </body>
