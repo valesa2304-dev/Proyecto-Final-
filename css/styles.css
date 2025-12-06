@@ -2392,11 +2392,7 @@ h1, h2, h3, h4, h5 {
         gap: 1rem;
     }
 }
-/* ==========================================
-   AJUSTES EXTRA RESPONSIVE PARA CELULARES
-   ========================================== */
 
-/* Tablets y celulares en vertical */
 @media (max-width: 768px) {
 
     /* Header más compacto */
@@ -2528,7 +2524,6 @@ h1, h2, h3, h4, h5 {
     }
 }
 
-/* Celulares pequeños */
 @media (max-width: 480px) {
 
     .hero-title,
@@ -2557,7 +2552,7 @@ h1, h2, h3, h4, h5 {
     }
 
     .header-cta {
-        display: none; /* si quisieras, para que el header no se sature */
+        display: none;
     }
 
     .menu-item img,
