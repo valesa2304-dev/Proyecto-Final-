@@ -1,29 +1,29 @@
 [
   {
-    "id": 201,
-    "name": "Cazuela de mariscos",
-    "desc": "Variedad de mariscos frescos como camarones, calamares, mejillones y pescado en un caldo aromático",
-    "price": 3500,
+    "id": 601,
+    "name": "Cazuela de Mariscos",
+    "desc": "Caldo con camarones, calamares, mejillones y pescado fresco, servido humeante.",
+    "price": 7200,
     "image": "img/cazuela de mariscos.jpg",
-    "alt": "Cazuela de mariscos",
-    "tag": "Favorito"
+    "alt": "Cazuela de mariscos de la casa",
+    "tag": "Recomendado"
   },
   {
-    "id": 204,
+    "id": 602,
     "name": "Ceviche de Pulpo",
-    "desc": "Pulpo tierno marinado al limón con ají. Textura única y sabor inigualable.",
+    "desc": "Pulpo suave marinado en limón con cebolla morada, chile dulce y culantro.",
     "price": 4700,
     "image": "img/pulpo.jpg",
-    "alt": "Ceviche de pulpo",
+    "alt": "Ceviche de pulpo en plato",
     "tag": "Premium"
   },
   {
-    "id": 301,
+    "id": 603,
     "name": "Pescado Frito Entero",
-    "desc": "Exterior crocante, interior jugoso. Con patacones y ensalada fresca.",
+    "desc": "Pescado entero crocante por fuera y jugoso por dentro, acompañado de patacones.",
     "price": 6500,
     "image": "img/pescado.jpg",
-    "alt": "Pescado frito entero",
-    "tag": "Recomendado"
+    "alt": "Pescado frito entero con patacones",
+    "tag": "Favorito"
   }
 ]

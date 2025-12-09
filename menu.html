@@ -48,9 +48,11 @@
 
   <!-- ===== HERO ===== -->
   <section class="menu-hero" id="inicio" style="background-image:url('img/fondo.jpg'); background-size:cover; background-position:center;">
-    <div class="container" style="backdrop-filter:brightness(.96); padding:3rem 0;">
+    <div class="container hero-overlay-box">
       <h1 class="hero-title">Nuestro Menú</h1>
-      <p class="hero-description">El auténtico sabor costeño con ingredientes frescos y pasión en cada plato.</p>
+      <p class="hero-description">
+        El auténtico sabor costeño con ingredientes frescos y pasión en cada plato.
+      </p>
     </div>
   </section>
 
@@ -95,15 +97,111 @@
     </div>
   </section>
 
+  <!-- ===== VIDEO PREPARACIÓN CEVICHE ===== -->
+  <section class="menu-video">
+    <div class="container menu-video-container">
+      <div class="menu-video-text">
+        <h2>Así preparamos nuestro ceviche</h2>
+        <p>
+          Una mirada real a cómo se prepara uno de los platos más pedidos del local.
+          La misma barra, los mismos ingredientes y la misma receta que usamos todos los días.
+        </p>
+        <ul>
+          <li>Pescado fresco del día</li>
+          <li>Limón recién exprimido</li>
+          <li>Cebolla morada, chile dulce y culantro</li>
+        </ul>
+      </div>
+      <div class="menu-video-player">
+        <video controls poster="img/ceviche.jpg">
+          <source src="mp4/ceviche.mp4" type="video/mp4">
+          Tu navegador no soporta video.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ESPECIALIDADES DINÁMICAS (JSON + jQuery) ===== -->
+  <section id="especiales" class="menu-category">
+    <div class="container">
+      <div class="category-header">
+        <div class="category-info">
+          <h2 class="category-title"><i class="bi bi-stars"></i> Especialidades destacadas</h2>
+          <p class="category-description">
+            Algunos de los platos que más suelen pedir quienes nos visitan.
+          </p>
+        </div>
+      </div>
+
+      <div class="menu-grid" id="grid-especiales">
+        <!-- jQuery cargará aquí las tarjetas -->
+      </div>
+    </div>
+  </section>
+
   <!-- ===== CATEGORÍAS ===== -->
   <section id="categorias" class="categorias">
     <div class="container">
-      <div class="category-grid">
-        <a href="#entradas" class="category-card"><i class="bi bi-egg-fried"></i><span>Entradas</span></a>
-        <a href="#ceviches" class="category-card"><i class="bi bi-droplet"></i><span>Ceviches</span></a>
-        <a href="#platos-fuertes" class="category-card"><i class="bi bi-fire"></i><span>Platos Fuertes</span></a>
-        <a href="#bebidas" class="category-card"><i class="bi bi-cup-straw"></i><span>Bebidas</span></a>
-        <a href="#promociones" class="category-card"><i class="bi bi-percent"></i><span>Promociones</span></a>
+      <h2 class="category-section-title">Explora el menú</h2>
+      <p class="category-section-subtitle">
+        Elegí por dónde empezar: algo para picar, un ceviche fresco, un plato fuerte o una bebida fría.
+      </p>
+
+      <div class="category-menu-grid">
+        <a href="#entradas" class="category-menu-card">
+          <div class="category-icon-wrap">
+            <i class="bi bi-egg-fried"></i>
+          </div>
+          <div class="category-text">
+            <h3>Entradas</h3>
+            <p>Para abrir el apetito.</p>
+          </div>
+          <i class="bi bi-chevron-right category-arrow"></i>
+        </a>
+
+        <a href="#ceviches" class="category-menu-card">
+          <div class="category-icon-wrap">
+            <i class="bi bi-droplet"></i>
+          </div>
+          <div class="category-text">
+            <h3>Ceviches</h3>
+            <p>Frescos y preparados al momento.</p>
+          </div>
+          <i class="bi bi-chevron-right category-arrow"></i>
+        </a>
+
+        <a href="#platos-fuertes" class="category-menu-card">
+          <div class="category-icon-wrap">
+            <i class="bi bi-fire"></i>
+          </div>
+          <div class="category-text">
+            <h3>Platos Fuertes</h3>
+            <p>Especialidades de la casa.</p>
+          </div>
+          <i class="bi bi-chevron-right category-arrow"></i>
+        </a>
+
+        <a href="#bebidas" class="category-menu-card">
+          <div class="category-icon-wrap">
+            <i class="bi bi-cup-straw"></i>
+          </div>
+          <div class="category-text">
+            <h3>Bebidas</h3>
+            <p>Frescos, gaseosas y más.</p>
+          </div>
+          <i class="bi bi-chevron-right category-arrow"></i>
+        </a>
+
+        <a href="#promociones" class="category-menu-card">
+          <div class="category-icon-wrap">
+            <i class="bi bi-percent"></i>
+          </div>
+          <div class="category-text">
+            <h3>Promociones</h3>
+            <p>Combos y ofertas del momento.</p>
+          </div>
+          <i class="bi bi-chevron-right category-arrow"></i>
+        </a>
       </div>
     </div>
   </section>
@@ -558,7 +656,7 @@
               <span class="feature"><i class="bi bi-people"></i> 2 o más personas</span>
             </div>
             <div class="item-actions">
-              <button class="btn btn-accent add-to-cart" disabled title="Selecciona por WhatsApp">
+              <button class="btn btn-accent" disabled title="Selecciona por WhatsApp">
                 <i class="bi bi-cart-plus"></i> Agregar
               </button>
               <a href="https://wa.me/50663199969?text=Hola%2C%20quiero%20consultar%20las%20promociones%20de%20la%20casa" class="btn btn-secondary" target="_blank">
@@ -719,6 +817,7 @@
   </a>
 
   <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="js/menu.js"></script>
 </body>
 </html>
